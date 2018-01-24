@@ -1,0 +1,71 @@
+<div class="page-bar">
+     <div data-ng-include="'tpl/header.html'" data-ng-controller="HeaderController" class="page-header navbar navbar-fixed-top"> </div> 
+</div>
+
+<div data-ng-include="'tpl/sidebar.html'" data-ng-controller="SidebarController" class="page-sidebar-wrapper"> </div>
+<div class="page-content-wrapper  ">
+                <div class="page-content">
+
+ <div class="col-md-12 portlet light">
+        <!-- BEGIN PORTLET-->
+        <div class="portlet box blue-hoki">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-gift"></i>Country</div>
+                
+            </div>
+       <div class="portlet-body form">
+                <!-- BEGIN FORM-->
+                <form  class="form-horizontal ">
+                    <div class="form-body">
+                        
+                                        <div class="form-group">
+                                            <h4 class="col-md-3 control-label">Country ID</h4>
+                                            <div class="col-md-4">
+                                                <input type="text"  class="form-control" ng-model="countryCode">
+                                            </div>
+                                        </div>
+                                    <div class="form-group">
+                                        <h4 class="col-md-3 control-label">Country Name</h4>
+                                        <div class="col-md-4">
+                                            <input type="text"  class="form-control" ng-model="countryRoleName" >
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <h4 class="col-md-3 control-label">Country Telephone</h4>
+                                        <div class="col-md-4">
+                                            <input type="text"  class="form-control" ng-model="countryTelephone" >
+                                        </div>
+                                    </div>
+                                    
+                                     <div class="form-group">
+                                      <h4 class="col-md-3 control-label">Active</h4>
+                                      <div class="col-md-4">
+                                    <div class="make-switch switch-small">
+                                        <input type="checkbox" 
+                                        ng-model="option" data-checkbox="VALUE4" class="alert-status">
+                                    </div>
+                        </div>
+                        </div>
+                          <div class="">
+                        <div class="row">
+                            <div class="row" ng-show="countrySave">
+                            <div class="col-md-offset-9 col-md-9">
+                                <button type="button" class="btn green" ng-click="exit()">Cancel</button>
+                                 <button type="button" class="btn green" ng-click="createCountry(countryCode,countryRoleName,countryTelephone,option)">Save</button>
+                            </div>
+                        </div>
+                         <div class="row" ng-show="countryUpdate">
+                            <div class="col-md-offset-9 col-md-9">
+                                <button type="button" class="btn green" ng-click="exit()">Cancel</button>
+                                 <button type="button" class="btn green" ng-click="updateCountry(countryCode,option)">Save</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                        </form>
+                        </div>
+               
+                </div>
+                </div>
+                </div>
