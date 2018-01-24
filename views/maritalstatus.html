@@ -5,7 +5,7 @@
 
 <div data-ng-include="'tpl/sidebar.html'" data-ng-controller="SidebarController" class="page-sidebar-wrapper"> </div>
 <div class="page-content-wrapper">
-                <div class="page-content">
+                <div class="page-content"> 
 
  <div class="row">
         <div class="col-md-12 col-sm-12">
@@ -15,7 +15,7 @@
                     <div class="caption caption-md">
                        
                         <span class="caption-subject font-green bold uppercase">Marital Status</span>
-                        
+                         
                     </div>
                      <div class="form-actions">
                                
@@ -24,7 +24,7 @@
                 </div>
                 <div class="portlet-body">
                     <div class="task-content">
-                        <div class="scroller" style="height: 282px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+                        <div class="scroller" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
                             
                             <ul class="task-list">
 
@@ -37,11 +37,11 @@
                                     <!-- <th > Permission </th> -->
                                 </tr>
                             </thead>
-                            <tr ng-repeat="maritalstatues in maritalstatus">
-                                <td class="col-md-offset-4"><a style="text-align:left;  display: block;" class="more col-sm-offset-6" href="#" ng-click="viewMaritalStatus()">{{maritalstatues.id}}</a>
+                            <tr ng-repeat="maritalstatues in releaseData">
+                                <td class="col-md-offset-4"><a style="text-align:left;  display: block;" class="more col-sm-offset-6" href="#" ng-click="viewMaritalStatus(maritalstatues.Id,maritalstatues.value,maritalstatues.Status)">{{maritalstatues.Id}}</a>
                                    
                                 </td>
-                                <td >{{maritalstatues.name}}  </td>
+                                <td >{{maritalstatues.value}}  </td>
                                 <!-- <td >  <a class="more" href="#" ng-click="viewMaritalStatus()">View</a> </td> -->
                                 
                                 

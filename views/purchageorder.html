@@ -1,0 +1,85 @@
+<div class="page-bar">
+     <div data-ng-include="'tpl/header.html'" data-ng-controller="HeaderController" class="page-header navbar navbar-fixed-top"> </div> 
+</div>
+
+<div data-ng-include="'tpl/sidebar.html'" data-ng-controller="SidebarController" class="page-sidebar-wrapper"> </div>
+<div class="page-content-wrapper  ">
+                <div class="page-content">
+
+
+ <div class="col-md-12 portlet light"> 
+      
+<div class="row">
+        <div class="col-md-12 col-sm-12">
+            <!-- BEGIN PORTLET-->
+            <div class="portlet light bordered tasks-widget">
+                <div class="portlet-title">
+                    <div class="caption caption-md">
+                       
+                        <span class="caption-subject font-green bold uppercase">Purchase order</span>
+                        
+                    </div>
+
+                     <div class="form-actions">
+                               
+                                <button  class="btn blue  pull-right" ng-click="newConstitution()">New</button>
+                            </div>
+                </div>
+                 <div class="filters">
+      <div>
+        <select name="filter" id="filter" ng-model="dropdown" ng-change="filters(dropdown)">
+         <!-- <select id="input3" class="form-control" ng-model="filterTxn.txnType"> -->
+   <option value="">All</option>
+   <option value="draft">Draft</option>
+   <option value="approved">Approved</option>
+   <option value="billed">Billed</option>
+   <option value="partly billed">PartlyBilled</option>
+   <option value="closed">Closed</option>
+   <option value="cancelled">Cancelled</option>
+  </select>
+      </div>
+                <!--  <div class="portlet-body">
+                    <div class="task-content">
+                        <div class="scroller" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+                             -->
+                            <div class="portlet-body clearfix" >
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                          <!--   <table class="table table-hover table-light"> -->
+                            <thead>
+                                <tr >
+                                    <th style=" font-weight: bold;width: 20%;text-align: center;"> Dates</th>
+                                    <th style=" font-weight: bold;width: 20%;text-align: center;">  PO Number </th>
+                                    <th style=" font-weight: bold;width: 20%;text-align: center;">  Vendor </th>
+                                    <th style=" font-weight: bold;width: 20%;text-align: center;">  Status </th>
+                                    <th style=" font-weight: bold;width: 20%;text-align: center;"> Amount </th>
+                                    <!-- <th > Permission </th> -->
+                                </tr>
+                            </thead>
+                            <tr ng-repeat="purchaseorder in purchage |filter:customFilter">
+                             <td style="text-align: center;">{{purchaseorder.date}}  </td>
+                                <td style="text-align: end;"><a  href="#" ng-click="viewpurchasedetailes()">{{purchaseorder.ponumber}}</a>
+                                   
+                                </td>
+                                <td style="text-align: center;">{{purchaseorder.vendor}}  </td>
+                                 <td  style="text-align: center;">{{purchaseorder.status}}  </td>
+                                  <td style="text-align: end;">{{purchaseorder.amount}}  </td>
+                                <!-- <td >  <a class="more" href="#" ng-click="viewConstitution()">View</a> </td> -->
+                                
+                                
+                                
+                            </tr>
+                        </table>
+                            <!-- END START TASK LIST -->
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+
+                         
+                  

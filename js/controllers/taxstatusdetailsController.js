@@ -3,44 +3,49 @@ angular.module('MetronicApp').controller('taxstatusdetailesController', function
      $scope.formTaxStatus=false;
  
 $scope.newTaxStatus=function(){
-    $state.go('cvTaxStatus')
+	$rootScope.taxid="";
+ $rootScope.taxname="";
+ $scope.taxsavebutton=true;
 
-};
+    $state.go('cvTaxStatus',{core:$scope.taxsavebutton})
+
+}; 
 
 
-$scope.taxstatus=[
-	{
- 		"id":"001",
- 		"name":"Admin"   
-	},
-	{
-		"id":"002",
-		"name":"Customer Supplier" 
-	},
-	{
-    	"id":"003",
-    	"name":"Bank Manager"
+$scope.gettax =function(){   
+   $http({
+    method : 'POST',
+    url    : ' http://park.sastratechnologies.biz/service/taxstatus',   
+    headers :
+            {
+                'Content-Type':'application/x-www-form-urlencoded',
+               
+            }
+    }) 
+   .success(function(data) {
+    //console.log(data);
+    $scope.taxstatus = data.Taxstatus;
+    // console.log($scope.releaseData);
+    // for(var i=0; i< $scope.releaseData.length;i++) {
+    // $rootScope.religionid=$scope.releaseData[i].ID;
+    // $rootScope.religionname=$scope.releaseData[i].value;
+// }
 
-	},
-	{
-		"id":"004",
-		"name":"Bank Tellar"
-	},
-	{
-		"id":"005",
-		"name":"Finanical Manager"
-	},
-	{
-		"id":"006",
-		"name":"Loan Officer"
-	},
-	{
-		"id":"007",
-		"name":"Documentb Verification Unit"
-	}
-];
+    
+   })
+   .error(function(data){
+        console.log(data);
+    });
 
-$scope.viewTaxStatus=function(){
+}
+
+$scope.gettax();
+
+
+$scope.viewTaxStatus=function(taxid,taxname,status){
+	 $rootScope.taxid=taxid;
+ $rootScope.taxname=taxname;
+ $rootScope.option=status;
    $state.go('cvTaxStatus')  
 }
 

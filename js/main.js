@@ -1854,7 +1854,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
     })
    
     .state('cvConstitution', {
-            url: "/cvConstitution",
+            url: "/cvConstitution/:core",
             templateUrl: "views/cvConstitution.html",
             data: { pageTitle: 'cvConstitution' },
             controller: "cvConstitutionController",
@@ -2044,7 +2044,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
     }) 
 
 .state('cvMaritalStatus', {
-            url: "/cvMaritalStatus",
+            url: "/cvMaritalStatus/:core",
             templateUrl: "views/cvMaritalStatus.html",
             data: { pageTitle: 'cvMaritalStatus' },
             controller: "cvMaritalStatusController",
@@ -2138,7 +2138,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
         }
     }) 
 .state('cvReligion', {
-            url: "/cvReligion",
+            url: "/cvReligion/:core",
             templateUrl: "views/cvReligion.html",
             data: { pageTitle: 'cvReligion' },
             controller: "cvReligionController",
@@ -2232,7 +2232,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
         }
     }) 
 .state('cvSalutation', {
-            url: "/cvSalutation",
+            url: "/cvSalutation/:core",
             templateUrl: "views/cvSalutation.html",
             data: { pageTitle: 'cvSalutation' },
             controller: "cvSalutationController",
@@ -2373,7 +2373,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
         }
     }) 
 .state('cvTaxStatus', {
-            url: "/cvTaxStatus",
+            url: "/cvTaxStatus/:core",
             templateUrl: "views/cvTaxStatus.html",
             data: { pageTitle: 'cvTaxStatus' },
             controller: "cvTaxStatusController",
@@ -2466,6 +2466,108 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
             }]
         }
     }) 
+
+.state('newPurchaseOrder', {
+        url: "/newPurchaseOrder/:purchase",
+        templateUrl: "views/newPurchaseOrder.html",
+        data: { pageTitle: 'newurchaseOrder' },
+        controller: "newPurchaseOrderController",
+        resolve: {
+            deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                return $ocLazyLoad.load({
+                    name: 'Leads',
+                    insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
+                    files: [
+                        '../assets/global/plugins/morris/morris.css',
+                        '../assets/global/plugins/morris/morris.min.js',
+                        '../assets/global/plugins/morris/raphael-min.js',
+                        '../assets/global/plugins/jquery.sparkline.min.js',
+                        '../assets/global/plugins/clockface/css/clockface.css',
+                        '../assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css',
+                        '../assets/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css',
+                        '../assets/global/plugins/bootstrap-colorpicker/css/colorpicker.css',
+                        '../assets/global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css',
+
+                        '../assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js',
+                        '../assets/global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js',
+                        '../assets/global/plugins/clockface/js/clockface.js',
+                        '../assets/global/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js',
+                        '../assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js',
+
+                        '../assets/pages/scripts/components-date-time-pickers.min.js',
+
+                        '../assets/global/plugins/font-awesome/css/font-awesome.min.css',
+                        '../assets/global/plugins/simple-line-icons/simple-line-icons.min.css',
+                        '../assets/global/plugins/bootstrap/css/bootstrap.min.css',
+                        '../assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css',
+
+                        '../assets/global/css/components.min.css',
+                        '../assets/global/css/plugins.min.css',
+                        '../assets/layouts/layout/css/layout.min.css',
+                        '../assets/layouts/layout/css/themes/darkblue.min.css',
+                        '../assets/layouts/layout/css/custom.min.css',
+
+                        '../assets/global/plugins/bootstrap-toastr/toastr.min.css',
+                        '../assets/global/plugins/bootstrap-toastr/toastr.min.js',
+                        '../assets/pages/scripts/ui-toastr.min.js',
+
+                        '../assets/global/plugins/bootstrap/js/bootstrap.min.js',
+                        '../assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js',
+                        '../assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js',
+                        '../assets/global/plugins/jquery.blockui.min.js',
+                        '../assets/global/plugins/js.cookie.min.js',
+                        '../assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js',
+
+                        '../assets/pages/scripts/dashboard.min.js',
+                        'js/controllers/newPurchaseOrderController.js',
+                     ]
+                });
+            }]
+        }
+    })
+
+.state('purchageorder', {
+        url: "/purchageorder",
+        templateUrl: "views/purchageorder.html",
+        data: { pageTitle: 'purchageorder' },
+        controller: "purchageController",
+        resolve: {
+            deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                return $ocLazyLoad.load({
+                    name: 'Leads',
+                    insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
+                    files: [
+                        '../assets/global/plugins/morris/morris.css',
+                        '../assets/global/plugins/morris/morris.min.js',
+                        '../assets/global/plugins/morris/raphael-min.js',
+                        '../assets/global/plugins/jquery.sparkline.min.js',
+
+                        '../assets/global/plugins/font-awesome/css/font-awesome.min.css',
+                        '../assets/global/plugins/simple-line-icons/simple-line-icons.min.css',
+                        '../assets/global/plugins/bootstrap/css/bootstrap.min.css',
+                        '../assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css',
+
+                        '../assets/global/css/components.min.css',
+                        '../assets/global/css/plugins.min.css',
+                        '../assets/layouts/layout/css/layout.min.css',
+                        '../assets/layouts/layout/css/themes/darkblue.min.css',
+                        '../assets/layouts/layout/css/custom.min.css',
+
+                        '../assets/global/plugins/bootstrap/js/bootstrap.min.js',
+                        '../assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js',
+                        '../assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js',
+                        '../assets/global/plugins/jquery.blockui.min.js',
+                        '../assets/global/plugins/js.cookie.min.js',
+                        '../assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js',
+
+                        '../assets/pages/scripts/dashboard.min.js',
+                        // 'js/controllers/schoolboarddetailsController.js',
+                        'js/controllers/purchageController.js',
+                    ]
+                });
+            }]
+        }
+    })
 
 .state('proformaorder', {
         url: "/proformaorder",

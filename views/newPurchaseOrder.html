@@ -1,0 +1,332 @@
+<div class="page-bar">
+     <div data-ng-include="'tpl/header.html'" data-ng-controller="HeaderController" class="page-header navbar navbar-fixed-top"> </div> 
+</div>
+
+<div data-ng-include="'tpl/sidebar.html'" data-ng-controller="SidebarController" class="page-sidebar-wrapper"> </div>
+<div class="page-content-wrapper">
+                <div class="page-content">
+
+                    <div class="row" ng-show="newpurchasedetails">
+                <div class="col-md-12 col-sm-12">
+                    <!-- BEGIN PORTLET-->
+
+                    <div class="portlet light clearfix">
+                        <div class="portlet-title">
+                            <div class="caption caption-md">
+                              
+                                <h4> <span class="caption-subject font-green bold uppercase">NEW purchase order</span></h4>
+                            </div>
+                            
+
+                        </div>
+                        <div class="portlet-body">
+                            <form name="addProformaForm">
+                                <div class="row">
+                            <div class="col-md-3 padding-col p7" style="width: 27%;">
+                                <label class="control-label fs mandatoryField" style="text-align:center">VENDOR</label>
+                                <input type="text" class="form-control common "  id=""  />
+                                <a href="" style="font-size: 73%;">Add New</a>
+                            </div>
+                        </div>
+                        
+                            <div class="row">
+                            <div class="col-md-3 padding-col p7" style="width: 27%;" >
+                                <label class="control-label fs mandatoryField" style="text-align:center">Purchase order</label>
+                                <input type="text" class="form-control common "  id=""  >
+                            </div>
+                        </div>
+
+                            <div class="row">
+                                <div class="col-md-3 padding-col p5">
+                                   
+                                    <label class="control-label fs mandatoryField" style="text-align:center">DATE</label>
+                                    
+                                   
+                                     
+                                      <div class="input-group input-medium date date-picker" data-date-format="yyyy-mm-dd" data-date-start-date="+0d">
+                                        <input type="text" name="" class="form-control common" style="width: 100%;">
+                                            <span class="input-group-btn">
+                                        <button class="btn default" type="button">
+                                            <i class="fa fa-calendar"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                               <div class="portlet-body clearfix" >
+                        <div class="table-responsive" >
+                            <table class="table table-bordered"  >
+                                            <thead>
+                                                <tr class="uppercase">
+                             <th style=" font-weight: bold; width: 13%; text-align: center;">ITEM DETAILS</th>
+                        <th style=" font-weight: bold;width: 13%; text-align: center;">QUANTITY</th>
+                                 <th style=" font-weight: bold; width: 13%;text-align: center;">RATE</th>
+                            <th style=" font-weight: bold; width: 13%;text-align: center;">TAX</th>
+                                <th style=" font-weight: bold;width: 13%; text-align:  center;">AMOUNT</th>
+                                <th style=" font-weight: bold;width: 13%; text-align: center;">ACTION</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody> 
+                                                <tr ng-repeat="cl in proforma" >
+                                                    <td style="text-align: center; width: 8%;">
+                                <input type="text" name="itemdetailes" class="form-control itemdetailes" ng-model="cl.items" maxlength="40" ></td>
+                                <td style="text-align: end;"> <input type="text" name="QUANTITY" class="form-control itemdetailes" ng-model="cl.QUANTITY" maxlength="40" ></td>
+                                <td style="text-align: end;"> <input type="text" name="TAX" class="form-control itemdetailes" ng-model="cl.tax" maxlength="40" ></td>
+                                 <td style="text-align: center"> <input type="text" name="RATE" class="form-control itemdetailes" ng-model="cl.rate" maxlength="40" ></td>
+                            <td style="text-align: end;"> <input type="text" name="amount" class="form-control itemdetailes" ng-model="cl.amount" maxlength="40" ></td>
+                            <td style="text-align: center" ><div class="btn-group"  >
+                            <!-- <div class="dropup"> -->
+                                        <button class="btn btn-xs green dropdown-toggle " style="overflow:hidden;" ng-model="cl.action"  type="button" data-toggle="dropdown" aria-expanded="false"> Actions
+                                    <i class="fa fa-angle-down"></i>
+                                    </button>
+                                             <ul class="dropdown-menu " role="menu" style="min-width:11px;">
+                                                            <li>
+                                             <a href="#" ng-click="newrow()" >
+                                             <i class="fa fa-plus"></i> New row </a>
+                                                            </li>
+                                                            <li>
+                                                <a href="#" ng-click="deleteRow($indexa)">
+                                                        <i class="fa fa-trash-o"></i> Delete </a>
+                                                            </li>
+                                                           
+                                                        </ul>
+                                                        </div>
+                                                    <!-- </div> -->
+                                                   </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            
+                        <div class="row">
+                            <div  class="col-md-4 padding-col p7">
+                                </div>
+                            <!-- <div  class="col-md-3 padding-col p5">
+                                </div> -->
+                            <div  class="col-md-3 padding-col p6">
+                                <label class="control-label fs mandatoryField " style="text-align:right;width: 90%;"> SUB Total</label>
+                                </div>
+                                <!-- <div  class="col-md-3 padding-col p5" >
+                                </div> -->
+                                <div  class="col-md-3 padding-col p6" style="text-align: end;width: 27%;">
+                                    <input type="text" style="text-align: end;" >
+                                </div>
+                        </div>
+                     <div class="row">
+                            <div  class="col-md-4 padding-col p7">
+                            
+                        </div>
+                       <!--  <div  class="col-md-4 padding-col p7">
+                            
+                        </div> -->
+                            <div  class="col-md-3 padding-col p6" style="width: 27%;">
+                    <label class="control-label fs mandatoryField " style="text-align:right;width: 60%;" />DISCOUNT</label>
+
+                                
+                                           
+                                  
+                                
+                  </div>
+                 
+                        <div  class="col-md-3 padding-col p6" style="text-align: end;">
+                             <input type="text" style="width: 63%;text-align: end;"/><select style="width: 19%;">
+                         <option>Rs</option>
+                        <option>%</option></select>   
+                        </div>
+                    </div>
+                    <div class="row">
+                            
+                            <!-- <div class="col-md-6 padding-col p5">
+                            
+                        </div> -->
+                         <div class="col-md-4 padding-col p7">
+                            
+                        </div> 
+                       <div class="col-md-3 padding-col p6">
+                            <label class="control-label fs mandatoryField" style="text-align:right;width: 90%;"> TOTAL</label>
+                        </div>
+                        <div  class="col-md-3 padding-col p6" style="text-align: end;width: 27%;">
+                                    <input type="text" style="text-align: end;">
+                                </div>
+                        
+                                
+                                 
+                    </div>
+                     <div class="form-body">
+                <div class="form-group bottom-border bt-border">
+                  <div class="col-md-3 padding-col p5">
+
+                    <label class="control-label fs" style="text-align:center">Terms & Condition</label>
+                   <textarea style ="margin: 0px -224.5px 0px 0px;width: 473px;height: 70px;" class="form-control" rows="5" id="comment" name="commentname" maxlength="240"></textarea>
+                  </div>
+                </div>
+                </div>
+                <br><br><br><br><br><br>
+                                <div class="row ">
+                                        <div class="col-md-4 " style="float:right ">
+                                            <button class="btn green" ng-click="exit()">CANCEL</button>
+                                            <button class="btn green"  >SAVE</button>
+                                            <button class="btn green"  >SAVE AS DRAFT</button>
+                                        </div>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- END PORTLET-->
+
+                </div>
+            </div>
+
+<div class="row" ng-show="viewpurchasedetails">
+                <div class="col-md-12 col-sm-12">
+                    <!-- BEGIN PORTLET-->
+
+                    <div class="portlet light clearfix">
+                        <div class="portlet-title">
+                            <div class="caption caption-md">
+                              
+                                <h4> <span class="caption-subject font-green bold uppercase">Purchase order</span></h4>
+                            </div>
+                            
+
+                        </div>
+                        <div class="portlet-body">
+                            <form name="addProformaForm">
+                                <div class="row">
+                            <div class="col-md-3 padding-col p7" style="width: 27%;">
+                                <label class="control-label fs mandatoryField" style="text-align:center">VENDOR</label>
+                                <input type="text" class="form-control common "  id=""  >
+                            </div>
+                        </div>
+                            <div class="row">
+                            <div class="col-md-3 padding-col p7" style="width: 27%;" >
+                                <label class="control-label fs mandatoryField" style="text-align:center">Purchase order</label>
+                                <input type="text" class="form-control common "  id=""  >
+                            </div>
+                        </div>
+                            <div class="row">
+                                <div class="col-md-3 padding-col p5">
+                                   
+                                    <label class="control-label fs mandatoryField" style="text-align:center">DATE</label>
+                                    
+                                   
+                                     
+                                      <div class="input-group input-medium date date-picker" data-date-format="yyyy-mm-dd" data-date-start-date="+0d">
+                                        <input type="text" name="" class="form-control common" style="width: 100%;">
+                                            <span class="input-group-btn">
+                                        <button class="btn default" type="button">
+                                            <i class="fa fa-calendar"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                               <div class="portlet-body clearfix" >
+                        <div class="table-responsive" >
+                            <table class="table table-bordered">
+                                            <thead>
+                                                <tr class="uppercase">
+                                                    <th style=" font-weight: bold;text-align: center;">ITEM DETAILS</th>
+                                                    <th style=" font-weight: bold;text-align: center;">QUANTITY</th>
+                                                    <th style=" font-weight: bold;text-align: center;">RATE</th>
+                                                    <th style=" font-weight: bold;text-align: center;">TAX</th>
+                                                    <th style=" font-weight: bold;text-align: center;">AMOUNT</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody> 
+                                                <tr ng-repeat="proformas in proforma" >
+                                                    <td style="text-align: center;">{{proformas.itemDetails}}</td>
+                                                    <td style="text-align: end;" >{{proformas.quality}}</td>
+                                                    <td style="text-align: center;">{{proformas.rate}}</td>
+                                                    <td style="text-align: end;">{{proformas.tax}}</td>
+                                                    <td style="text-align: end;">{{proformas.amount}}</td> 
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            
+                        <div class="row">
+                            <div  class="col-md-3 padding-col p5">
+                                </div>
+                            <div  class="col-md-3 padding-col p5">
+                                </div>
+                            <div  class="col-md-3 padding-col p5">
+                                <label class="control-label fs mandatoryField " style="text-align:right;width: 90%;"> SUB Total</label>
+                                </div>
+                                <div  class="col-md-3 padding-col p5" >
+                                </div>
+                                <div  class="col-md-3 padding-col p5" style="text-align: end;">
+                                    <input type="text" style="text-align: end;" >
+                                </div>
+                        </div>
+                     <div class="row">
+                            <div  class="col-md-3 padding-col p5">
+                            
+                        </div>
+                        <div  class="col-md-3 padding-col p5">
+                            
+                        </div>
+                            <div  class="col-md-3 padding-col p5">
+                    <label class="control-label fs mandatoryField " style="text-align:right;width: 60%;" />DISCOUNT</label>
+
+                                
+                                           
+                                  
+                                
+                  </div>
+                  <div  class="col-md-3 padding-col p5"></div>
+                        <div  class="col-md-3 padding-col p5" style="text-align: end;">
+                             <input type="text" style="width: 63%;text-align: end;"/><select style="width: 19%;">
+                         <option>Rs</option>
+                        <option>%</option></select>   
+                        </div>
+                    </div>
+                    <div class="row">
+                            
+                            <div class="col-md-3 padding-col p5">
+                            
+                        </div>
+                        <div class="col-md-3 padding-col p5">
+                            
+                        </div>
+                        <div class="col-md-3 padding-col p5">
+                            <label class="control-label fs mandatoryField" style="text-align:right;width: 90%;"> TOTAL</label>
+                           
+                        </div>
+                         <div  class="col-md-3 padding-col p5" >
+                                </div>
+                                <div  class="col-md-3 padding-col p5" style="text-align: end;">
+                                    <input type="text" style="text-align: end;">
+                                </div>
+                    </div>
+                     <div class="form-body">
+                <div class="form-group bottom-border bt-border">
+                  <div class="col-md-3 padding-col p5">
+
+                    <label class="control-label fs" style="text-align:center">Terms & Condition</label>
+                   <textarea style ="margin: 0px -224.5px 0px 0px;width: 473px;height: 70px;" class="form-control" rows="5" id="comment" name="commentname" maxlength="240"></textarea>
+                  </div>
+                </div>
+                </div>
+                <br><br><br><br><br><br>
+                                <div class="row ">
+                                        <div class="col-md-4 " style="float:right ">
+                                            <button class="btn green" ng-click="exit()">CANCEL</button>
+                                            <button class="btn green"  >SAVE</button>
+                                            <button class="btn green"  >SAVE AS DRAFT</button>
+                                        </div>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- END PORTLET-->
+
+                </div>
+            </div>
+
+                </div>
+            </div>

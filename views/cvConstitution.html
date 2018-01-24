@@ -22,30 +22,39 @@
                                         <div class="form-group">
                                             <h4 class="col-md-3 control-label">Constitution ID</h4>
                                             <div class="col-md-4">
-                                                <input type="text"  class="form-control" >
+                                                <input type="text" ng-model="constitutionid" class="form-control" >
                                             </div>
                                         </div>
                                     <div class="form-group">
                                         <h4 class="col-md-3 control-label">Constitution Name</h4>
                                         <div class="col-md-4">
-                                            <input type="text"  class="form-control" >
+                                            <input type="text" ng-model="constitutionname" class="form-control" >
                                         </div>
                                     </div>
                                      <div class="form-group">
                                       <h4 class="col-md-3 control-label">Active</h4>
                                       <div class="col-md-4">
-                                    <div class="bootstrap-switch-container" style="width: 455px; margin-left: 0px;">
-                        <input type="checkbox" id="leatType" checked="checked" name="makeSwitch" ng-init="option=true" ng-checked="nextView(option)" ng-model="option" data-on-text="&nbsp;Yes&nbsp;" data-off-text="&nbsp;No&nbsp;">
-                        </div>
+                                    <div class="make-switch switch-small">
+                                        <input type="checkbox" 
+                                        ng-model="option" data-checkbox="VALUE4" class="status-button">
+                                    </div>
                         </div>
                         </div>
                           <div class="">
-                        <div class="row">
-                            <div class="col-md-offset-9 col-md-9">
+                             <!-- <div class="row"> -->
+                           <div class="row"  ng-show="constitutionsavebutton">
+                             <div class="col-md-offset-9 col-md-9">
                                 <button type="button" class="btn green" ng-click="exit()">Cancel</button>
-                                 <button type="button" class="btn green">Save</button>
+                                 <button type="button" class="btn green" ng-click="constitutionsave(constitutionid,constitutionname,option,type)">Save</button>
                             </div>
                         </div>
+                         <div class="row" ng-show="constitutionupdatebutton">
+                             <div class="col-md-offset-9 col-md-9">
+                                <button type="button" class="btn green" ng-click="exit()">Cancel</button>
+                                  <button type="button" class="btn green" ng-click="constitutionupdate(constitutionname,option,type)">Save</button>
+                            </div>
+                            </div>
+                            </div>
                     </div>
                         </form>
                         </div>

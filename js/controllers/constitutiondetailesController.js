@@ -1,46 +1,52 @@
- angular.module('MetronicApp').controller('constitutiondetailesController', function(config, $rootScope, $scope, $http, $timeout, $location,$state) {
+angular.module('MetronicApp').controller('constitutiondetailesController', function(config, $rootScope, $scope, $http, $timeout, $location,$state) {
      $("[name='makeSwitch']").bootstrapSwitch();
      $scope.formConstitution=false;
  
-$scope.newRole=function(){
-    $state.go('cvConstitution')
+$scope.newConstitution=function(){ 
+	$rootScope.constitutionid="";
+ $rootScope.constitutionname="";
+  $rootScope.type="";
+// $scope.religionsavebutton=true;
+$scope.constitutionsavebutton=true;
+    $state.go('cvConstitution',{core:$scope.constitutionsavebutton})
 
 };
 
 
-$scope.constitution=[
-	{
- 		"id":"001",
- 		"name":"Private"   
-	},
-	{
-		"id":"002",
-		"name":"Public Sector Bank" 
-	},
-	{
-    	"id":"003",
-    	"name":"LLP"
+$scope.getconstitution =function(){   
+   $http({
+    method : 'POST',
+    url    : '  http://park.sastratechnologies.biz/service/constitution',   
+    headers :
+            {
+                'Content-Type':'application/x-www-form-urlencoded',
+               
+            }
+    }) 
+   .success(function(data) {
+    //console.log(data);
+    $scope.constitution = data.constitution;
+    console.log($scope.releaseData);
+    // for(var i=0; i< $scope.releaseData.length;i++) {
+    // $rootScope.religionid=$scope.releaseData[i].ID;
+    // $rootScope.religionname=$scope.releaseData[i].value;
+// }
 
-	},
-	{
-		"id":"004",
-		"name":"Partnership"
-	},
-	{
-		"id":"005",
-		"name":"Individual"
-	},
-	{
-		"id":"006",
-		"name":"Association/Club"
-	},
-	{
-		"id":"007",
-		"name":"Foreigners"
-	}
-];
+    
+   })
+   .error(function(data){
+        console.log(data);
+    });
 
-$scope.viewConstitution=function(){
+}
+
+$scope.getconstitution();
+
+$scope.viewConstitution=function(constitutionid,constitutionname,status,type){
+	$rootScope.constitutionid=constitutionid;
+ $rootScope.constitutionname=constitutionname;
+ $rootScope.option=status;
+ $rootScope.type=type;
   $state.go('cvConstitution') 
 }
 
