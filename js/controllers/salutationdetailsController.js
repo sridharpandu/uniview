@@ -3,49 +3,45 @@ angular.module('MetronicApp').controller('salutationdetailsController', function
      $scope.formSalutation=false;
  
 $scope.newSalutation=function(){
-	$rootScope.salutationid="";
- $rootScope.salutationvalue="";
- $scope.salutationsavebutton=true;
-
-    $state.go('cvSalutation',{core:$scope.salutationsavebutton}) 
+    $state.go('cvSalutation')
 
 };
 
 
-$scope.getsalutation =function(){ 
-   $http({
-    method : 'POST',
-    url    : ' http://park.sastratechnologies.biz/service/salutation ',   
-    headers :
-            {
-                'Content-Type':'application/x-www-form-urlencoded',
-               
-            }
-    }) 
-   .success(function(data) {
-    //console.log(data);
-    $scope.salutationData = data.Salutation;
-    console.log($scope.salutationData);
-    
+$scope.salutation=[
+	{
+ 		"id":"001",
+ 		"name":"MR."   
+	},
+	{
+		"id":"002",
+		"name":"M/S." 
+	},
+	{
+    	"id":"003",
+    	"name":"DR."
 
-    
-   })
-   .error(function(data){
-        console.log(data);
-    });
+	},
+	{
+		"id":"004",
+		"name":"MASTER."
+	},
+	{
+		"id":"005",
+		"name":"SHR."
+	},
+	{
+		"id":"006",
+		"name":"SMT."
+	},
+	{
+		"id":"007",
+		"name":"JUSTICE"
+	}
+];
 
-}
-
-$scope.getsalutation();
-
-$scope.viewSalutation=function(salutationvalue,salutationid,status){
-
-	 $rootScope.salutationid=salutationid;
- $rootScope.salutationvalue=salutationvalue;
-  $rootScope.option=status;
- // $scope.save=true;
-  $state.go('cvSalutation');
-   // $state.go('cvSalutation') 
+$scope.viewSalutation=function(){
+   $state.go('cvSalutation') 
 }
 
 

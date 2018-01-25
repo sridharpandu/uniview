@@ -3,48 +3,36 @@ angular.module('MetronicApp').controller('maritalstatusController', function(con
      $scope.formMaritalStatus=false;
  
 $scope.newMaritalStatus=function(){
-   $rootScope.maritalidid="";
- $rootScope.maritalname="";
- $scope.maritalsavebutton=true;
-    $state.go('cvMaritalStatus',{core:$scope.maritalsavebutton}) 
+    $state.go('cvMaritalStatus')
 
 };
 
-$scope.getmarital =function(){
-   $http({
-    method : 'POST',
-    url    : '  http://park.sastratechnologies.biz/service/maritalstatus',   
-    headers :
-            {
-                'Content-Type':'application/x-www-form-urlencoded',
-               
-            }
-    }) 
-   .success(function(data) {
-    console.log(data);
-    $scope.releaseData = data.maritalstatus;
-    console.log($scope.releaseData); 
 
-    // $scope.religionid=$scope.releaseData.ID;
-    // $scope.religionname=$scope.releaseData.value;
-    // $state.go('dashboard')
-   })
-   .error(function(data){
-        console.log(data);
-    });
+$scope.maritalstatus=[
+	{
+ 		"id":"001",
+ 		"name":"None"   
+	},
+	{
+		"id":"002",
+		"name":"Married" 
+	},
+	{
+    	"id":"003",
+    	"name":"Divorced"
 
-}
+	},
+	{
+		"id":"004",
+		"name":"Widow"
+	},
+	{
+		"id":"005",
+		"name":"Seperated"
+	}
+];
 
-$scope.getmarital();
-
-
-
-
-$scope.viewMaritalStatus=function(maritalid,maritalvalue,status){
-  console.log("id",maritalid);
-   $rootScope.maritalidid=maritalid;
- $rootScope.maritalname=maritalvalue;
- $rootScope.option=status;
+$scope.viewMaritalStatus=function(){
    $state.go('cvMaritalStatus') 
 }
 

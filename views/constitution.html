@@ -33,16 +33,15 @@
                             <thead>
                                 <tr >
                                     <th style="text-align:left;" class="col-sm-6"><h5 class="col-sm-offset-6" style="margin-bottom:0!important; font-weight: bold;"> Constitution ID </th>
-                                    <th> <h5 style="margin-bottom:0!important; font-weight: bold;"> Constitution Type </h5></th>
-                                    <!-- <th > Constitution Name </th> -->
+                                    <th> <h5 style="margin-bottom:0!important; font-weight: bold;"> Constitution Name </h5></th>
+                                    <!-- <th > Permission </th> -->
                                 </tr>
                             </thead>
                             <tr ng-repeat="constitutions in constitution">
-                                <td class="col-md-offset-4"><a style="text-align:left;  display: block;" class="more col-sm-offset-6" href="#" ng-click="viewConstitution(constitutions.Id,constitutions.description,constitutions.Status,constitutions.Type)">{{constitutions.Id}}</a>
+                                <td class="col-md-offset-4"><a style="text-align:left;  display: block;" class="more col-sm-offset-6" href="#" ng-click="viewConstitution()">{{constitutions.id}}</a>
                                    
                                 </td>
-                                <td >{{constitutions.description}}  </td>
-                                <!-- <td >{{constitutions.description}}  </td> -->
+                                <td >{{constitutions.name}}  </td>
                                 <!-- <td >  <a class="more" href="#" ng-click="viewConstitution()">View</a> </td> -->
                                 
                                 

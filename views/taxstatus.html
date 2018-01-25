@@ -5,7 +5,7 @@
 
 <div data-ng-include="'tpl/sidebar.html'" data-ng-controller="SidebarController" class="page-sidebar-wrapper"> </div>
 <div class="page-content-wrapper">
-                <div class="page-content"> 
+                <div class="page-content">
 
  <div class="row">
         <div class="col-md-12 col-sm-12">
@@ -38,17 +38,17 @@
                                 </tr>
                             </thead>
                             <tr ng-repeat="taxstatues in taxstatus">
-                                <td class="col-md-offset-4"><a style="text-align:left;  display: block;" class="more col-sm-offset-6" href="#" ng-click="viewTaxStatus(taxstatues.Id,taxstatues.Taxstatusname,taxstatues.Status)">{{taxstatues.Id}}
+                                <td class="col-md-offset-4"><a style="text-align:left;  display: block;" class="more col-sm-offset-6" href="#" ng-click="viewTaxStatus()">{{taxstatues.id}}
                                    
                                 </td>
-                                <td >{{taxstatues.Taxstatusname}}  </td>
+                                <td >{{taxstatues.name}}  </td>
                                 <!-- <td >  <a class="more" href="#" ng-click="viewTaxStatus()">View</a> </td> -->
                                 
                                 
                                 
                             </tr>
                         </table>
-                         <!-- <a href="" style="float: right;">See All Records</a> -->
+                         <a href="" style="float: right;">See All Records</a>
                             <!-- END START TASK LIST -->
                         </div>
                          
