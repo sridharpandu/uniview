@@ -1,0 +1,17 @@
+uniview8_pastpayments:
+ path: '/pastpayments'
+ defaults:
+   _title: 'Pastpayments'
+   _form: '\Drupal\uniview8_pastpayments\Form\uniview8_pastpayments'
+ requirements:
+   _permission: 'administer site configuration'
+   _user_is_logged_in: 'TRUE'
+
+uniview8:
+  path: '/paidlist'
+  defaults:
+    _title: 'Payment history'
+    _controller: '\Drupal\uniview8_pastpayments\Controller\uniview8PastpaymentController::entryList'
+  requirements:
+    _permission: 'access content'
+    _user_is_logged_in: 'TRUE'

@@ -1,0 +1,5 @@
+name: Uniview8 Payment History
+description: Cloud based Fee Collection for recurring fees in Educational Institutions and Clubs - Payment History
+package: Sastra
+type: module
+core: 8.x
