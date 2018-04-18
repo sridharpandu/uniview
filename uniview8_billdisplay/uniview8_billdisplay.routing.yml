@@ -1,0 +1,42 @@
+uniview8_billdisplay:
+ path: '/billdisplay'
+ defaults:
+   _title: ''
+   _form: '\Drupal\uniview8_billdisplay\viewmyBill'
+ requirements:
+   _permission: 'access content'
+   _user_is_logged_in: 'TRUE'
+
+uniview8_billfetch:
+ path: '/fetchmyBill'
+ defaults:
+   _title: ''
+   _form: '\Drupal\uniview8_billdisplay\fetchmyBill'
+ requirements:
+   _permission: 'access content'
+   _user_is_logged_in: 'TRUE'
+
+uniview8_display:
+ path: '/displayBill'
+ defaults:
+   _title: ''
+   _form: '\Drupal\uniview8_billdisplay\displayBill'
+ requirements:
+   _permission: 'access content'
+   _user_is_logged_in: 'TRUE'
+
+billdisplay.config:
+ path: '/admin/config/billdisplay/config'
+ defaults:
+   _form: '\Drupal\uniview8_billdisplay\Form\ConfigForm'
+   _title: 'Configuration'
+ requirements:
+   _permission: 'administer site configuration'
+
+tablename.config:
+ path: '/admin/config/billdisplay/tableconfig'
+ defaults:
+   _form: '\Drupal\uniview8_billdisplay\Form\tableconfig'
+   _title: 'Configuration'
+ requirements:
+   _permission: 'administer site configuration'

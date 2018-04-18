@@ -1,0 +1,22 @@
+<?php
+
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+
+  $links = \Drupal::entityTypeManager()->getStorage('menu_link_content')
+  ->loadByProperties(['title' => 'Display Bill']);
+
+if($link = reset($links)) {
+
+}
+
+else{
+ $menu_link = MenuLinkContent::create([
+    'title' => 'Display Bill',
+    'link' => ['uri' => 'internal:/billdisplay'],
+    'menu_name' => 'main',
+    'expanded' => FALSE,
+  ]);
+  $menu_link->save();
+}
+?>
+

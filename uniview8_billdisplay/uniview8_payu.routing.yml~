@@ -1,0 +1,16 @@
+uniview8_payu:
+ path: '/payu'
+ defaults:
+   _title: ''
+   _form: '\Drupal\uniview8_payu\payuRequest'
+ requirements:
+   _permission: 'access content'
+
+
+payu.config:
+ path: '/admin/config/payu/config'
+ defaults:
+   _form: '\Drupal\uniview8_payu\Form\ConfigForm'
+   _title: 'Configuration'
+ requirements:
+   _permission: 'administer site configuration'

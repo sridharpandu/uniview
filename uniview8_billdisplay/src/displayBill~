@@ -1,0 +1,51 @@
+<?php
+
+namespace Drupal\uniview8_billdisplay;
+use Drupal\Core\Form\FormBase;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Component\Utility\SafeMarkup;
+use Drupal\Core\Routing\TrustedRedirectResponse;
+use \Drupal\Core\Url;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+class displayBill extends FormBase {
+
+
+  public function getFormId() {
+   
+  
+ return 'uniview';
+  }
+public function buildForm(array $form, FormStateInterface $form_state) {
+   
+
+
+$form['month'] = array(
+'#type' => 'radios',
+'#title' => t('Months'),
+'#required' => 'true',
+'#description' => t('Choose a month and click on fetch my bill to view your bill.'),
+'#options' => array('January'=>t('January'),'February'=>t('February'),'March'=>t('March'),'April'=>t('April'),'May'=>t('May'),'June'=>t('June'),'July'=>t('July'),'August'=>t('August'),'September'=>t('September'),'October'=>t('October'),'November'=>t('November'),'December'=>t('December')),
+);
+
+
+$form['#action'] = 'displayBill';
+$form['#method'] = 'POST';
+ $form['submit'] = array(
+      '#type' => 'submit',
+      '#value' => t('fetch my bill'),
+    );
+return $form;
+
+ }
+
+ function submitForm(array &$form, FormStateInterface $form_state) {
+
+return;
+
+
+}
+
+}
+
+ 

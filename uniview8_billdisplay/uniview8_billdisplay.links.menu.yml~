@@ -1,0 +1,5 @@
+uniview8_billdisplay.admin_item_1:
+  title: 'File upload configuration'
+  parent: system.admin
+  description: 'configuration to check xml is valid.'
+  route_name: billdisplay.config

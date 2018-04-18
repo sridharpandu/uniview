@@ -1,0 +1,5 @@
+name: Uniview8 billdisplay
+description: Displaying the xml bill 
+package: Sastra
+type: module
+core: 8.x

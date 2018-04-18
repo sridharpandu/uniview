@@ -1,0 +1,47 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+    <xs:element name="bill">
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element type="xs:string" name="clubname"/>
+          <xs:element type="xs:string" name="address"/>
+          <xs:element type="xs:string" name="city"/>
+          <xs:element name="member" maxOccurs="unbounded" minOccurs="0">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element type="xs:string" name="membernumber"/>
+                <xs:element type="xs:string" name="billnumber"/>
+                <xs:element type="xs:string" name="membername"/>
+                <xs:element type="xs:string" name="billdate"/>
+                <xs:element type="xs:string" name="DOB"/>
+                <xs:element type="xs:string" name="memberaddress1"/>
+                <xs:element type="xs:string" name="memberaddress2"/>
+                <xs:element type="xs:string" name="memberaddress3"/>
+                <xs:element type="xs:string" name="membercity"/>
+                <xs:element type="xs:string" name="memberpostalcode"/>
+                <xs:element type="xs:string" name="memberphonenumber"/>
+                <xs:element type="xs:string" name="memberemail"/>
+                <xs:element type="xs:string" name="preface"/>
+                <xs:element type="xs:string" name="columnh1"/>
+                <xs:element type="xs:string" name="columnh2"/>
+                <xs:element type="xs:string" name="columnh3"/>
+                <xs:element type="xs:string" name="columnh4"/>
+                <xs:element name="line" maxOccurs="unbounded" minOccurs="0">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element type="xs:string" name="particular1" maxOccurs="1" minOccurs="0"/>
+                      <xs:element type="xs:string" name="amount1" maxOccurs="1" minOccurs="0"/>
+                      <xs:element type="xs:string" name="particular2" maxOccurs="1" minOccurs="0"/>
+                      <xs:element type="xs:string" name="amount2" maxOccurs="1" minOccurs="0"/>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element type="xs:string" name="note"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      <xs:attribute type="xs:int" name="genason"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+
