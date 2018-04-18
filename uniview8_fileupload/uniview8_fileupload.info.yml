@@ -1,0 +1,9 @@
+name: Uniview8_fileupload
+description: Upload bills and usage details
+package: Sastra
+type: module
+
+version: 1.0
+
+core: 8.x
+configure: uniview.settings

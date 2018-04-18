@@ -1,0 +1,37 @@
+<?php
+namespace Drupal\uniview8_fileupload\Form;
+
+use Drupal\Core\Form\FormBase;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+
+
+class upload extends FormBase {
+
+  public function getFormId() {
+    return 'uniview8_fileupload';
+  }
+
+
+public function buildForm(array $form, FormStateInterface $form_state) {
+
+  $files = \Drupal::request()->files->get('files', array());
+
+//$file_temp = file_save_data($file_temp, 'public://' . $filename, FILE_EXISTS_RENAME);
+
+$form['submit'] = array(
+      '#type' => 'submit',
+      '#value' => t('proceed to pay'),
+    );	
+
+drupal_set_message($files);
+
+	return $form;
+	}
+
+
+	function submitForm(array &$form, FormStateInterface $form_state ){
+
+return $form;
+	}
+	}

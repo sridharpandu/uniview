@@ -1,0 +1,8 @@
+uniview8_fileupload:
+ path: '/uniview8/fileupload'
+ defaults:
+   _title: 'Upload Voucher'
+   _form: '\Drupal\uniview8_fileupload\Form\uniview8_fileupload'
+ requirements:
+   _permission: 'administer site configuration'
+   _user_is_logged_in: 'TRUE'
