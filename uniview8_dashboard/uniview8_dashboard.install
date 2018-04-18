@@ -1,0 +1,30 @@
+<?php
+namespace Drupal\menu_link_content\Plugin\Menu;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+
+  $links = \Drupal::entityTypeManager()->getStorage('menu_link_content')
+  ->loadByProperties(['title' => 'Dashboard']);
+
+if($link = reset($links)) {
+/*$menu_link = MenuLinkContent::create([
+    'title' => 'Dashboard',
+    'link' => ['uri' => 'internal:/uniview/dashboard'],
+    'menu_name' => 'main',
+    'expanded' => FALSE,
+  ]);
+  $menu_link->save();*/
+}
+
+else{
+ $menu_link = MenuLinkContent::create([
+    'title' => 'Dashboard',
+    'link' => ['uri' => 'internal:/uniview/dashboard'],
+    'menu_name' => 'main',
+    'expanded' => FALSE,
+  ]);
+  $menu_link->save();
+}
+?>
+
+
+

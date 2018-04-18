@@ -1,0 +1,5 @@
+name: Uniview8 dashboard
+description: Displaying the statistics of uniview
+package: Sastra
+type: module
+core: 8.x

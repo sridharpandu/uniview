@@ -1,0 +1,5 @@
+uniview8_dashboard.admin_item_1:
+  title: 'Dashboard configuration'
+  parent: system.admin
+  description: 'configuration to get the payment response table name.'
+  route_name: dashboard.config

@@ -1,0 +1,16 @@
+uniview8_dashboard:
+ path: '/uniview/dashboard'
+ defaults:
+   _title: ''
+   _form: '\Drupal\uniview8_dashboard\dashboard'
+ requirements:
+   _permission: 'access content'
+   _user_is_logged_in: 'TRUE'
+
+dashboard.config:
+ path: '/admin/config/dashboard/configform'
+ defaults:
+   _form: '\Drupal\uniview8_dashboard\Form\configform'
+   _title: 'Configuration'
+ requirements:
+   _permission: 'administer site configuration'
