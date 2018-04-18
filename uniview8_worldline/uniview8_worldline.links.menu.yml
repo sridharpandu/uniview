@@ -1,0 +1,5 @@
+worldline.admin_item_1:
+  title: 'Worldline Config'
+  parent: system.admin
+  description: 'To Configure Worldline.'
+  route_name: uniview8_worldline.config

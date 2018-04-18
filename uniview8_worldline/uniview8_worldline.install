@@ -1,0 +1,151 @@
+<?php
+
+function uniview8_worldline_schema() {
+ $schema['uniview8_worldline_response'] = array(
+   'fields' => array(
+    
+    'Autoid' => array(
+                    'type' => 'serial',
+                    'not null' => TRUE),
+
+    'worldline_firstname' => array(
+                   'type' => 'text',
+                   'size' => 'normal',
+                   'length' => '15',
+                   'not null' => FALSE,
+                   'description' => 'Self Explanatory'),
+
+    'worldline_memberid' => array('type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE,
+                 'description' => 'Self Explanatory'),
+   
+    'worldline_email' => array(
+                   'type' => 'text',
+                   'size' => 'normal',
+                   'length' => '50',
+                   'not null' => FALSE,
+                   'description' => 'Self Explanatory'),
+  
+    'worldline_phone' => array(
+                  'type' => 'text',
+                  'size' => 'normal',
+                  'length' => '20',
+                  'not null' => FALSE,
+                   'description' => 'Self Explanatory'),
+    
+   'worldline_billdate' => array(
+                 'type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE, 
+                 'description' => 'Self Explanatory'),
+  
+   'worldline_amount' => array(
+                  'type' => 'int',
+                  'size' => 'normal',
+                  'not null' => FALSE,
+                  'description' => 'Amount in paisa Format'),
+           
+    'worldline_orderid' => array(
+                 'type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE, 
+		             'description' => 'Self Explanatory'),
+	
+    'worldline_billnumber' => array(
+                 'type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE, 
+                 'description' => 'Self Explanatory'),
+        
+    'worldline_trntype' => array(
+                 'type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE, 
+                 'description' => 'Type Of Transaction'),
+
+    'worldline_txnid' => array(
+                 'type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE, 
+                 'description' => 'Transaction Reference Number'),
+
+    'worldline_AuthZcode' => array(
+                 'type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE, 
+                 'description' => 'Authorisation code sent by bank'),
+
+    'worldline_AuthZstatus' => array(
+                 'type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE, 
+                 'description' => 'Authorisation code sent by bank'),
+
+    'worldline_AuthNstatus' => array(
+                 'type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE, 
+                 'description' => 'Authorisation code sent by bank'),
+
+    'worldline_Respcode' => array(
+                 'type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE, 
+                 'description' => 'Response code sent by bank'),
+
+    'worldline_status' => array(
+                'type' => 'text',
+                'size' => 'normal',
+                'length' => '20', 'not null' => FALSE, 
+                'description' => 'Status Code of transaction'),
+  
+    'worldline_statusDesc' => array(
+                'type' => 'text',
+                'size' => 'normal',
+                'length' => '20', 'not null' => FALSE, 
+                'description' => 'Detailed Description of Transaction status'),
+  
+    'worldline_trntime' => array(
+                'type' => 'text',
+                'size' => 'normal',
+                'length' => '25', 'not null' => FALSE, 
+                'description' => 'Transaction Time'),
+  
+    'worldline_cardno' => array(
+                'type' => 'text',
+                'size' => 'normal',
+                'length' => '25', 'not null' => FALSE, 
+                'description' => 'Transaction Time'),
+
+    'worldline_scheme' => array(
+                'type' => 'text',
+                'size' => 'normal',
+                'length' => '25', 'not null' => FALSE, 
+                'description' => 'Transaction Time'),
+
+    'worldline_RRN' => array(
+                'type' => 'text',
+                'size' => 'normal',
+                'length' => '25', 'not null' => FALSE, 
+                'description' => 'Transaction Time'),
+
+  	'paidtime' => array(
+          'mysql_type' => 'timestamp',
+          'not null' => TRUE
+       )
+     ),
+  'primary key' => array('Autoid'),
+ );
+   return $schema;
+}
