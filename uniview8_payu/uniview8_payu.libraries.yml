@@ -1,0 +1,11 @@
+drupal.payu:
+  version: VERSION
+  css:
+    component:
+      css/pay.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/underscore
+    
+
