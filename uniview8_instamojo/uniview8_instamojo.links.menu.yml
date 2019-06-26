@@ -1,0 +1,5 @@
+uniview8_instamojo.admin_item_1:
+  title: 'instamojo Configuration'
+  parent: system.admin
+  description: 'Instamojo Configuration'
+  route_name: instamojo.config

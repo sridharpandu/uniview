@@ -1,0 +1,16 @@
+uniview8_hdfcebs:
+ path: '/hdfcebs'
+ defaults:
+   _title: ''
+   _form: '\Drupal\uniview8_hdfcebs\hdfcebsRequest'
+ requirements:
+   _permission: 'access content'
+
+
+hdfcebs.config:
+ path: '/admin/config/hdfcebs/config'
+ defaults:
+   _form: '\Drupal\uniview8_hdfcebs\Form\ConfigForm'
+   _title: 'Configuration'
+ requirements:
+   _permission: 'administer site configuration'

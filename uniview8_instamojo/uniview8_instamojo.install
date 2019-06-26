@@ -1,0 +1,106 @@
+<?php
+
+function uniview8_instamojo_schema() {
+ $schema['uniview8_instamojo_response'] = array(
+    'fields' => array(
+	'instamojo_mode' => array(
+                  'type' => 'text',
+                  'size' => 'normal',
+                  'length' => '35',
+                  'not null' => FALSE,
+                  'description' => 'CC-CreditCard, DB-DebitCard, NB-NetBanking'),
+      'instamojo_amount' => array(
+                   'type' => 'int',
+                   'size' => 'normal',
+                   'not null' => FALSE,
+                   'description' => 'Original amount sent by instamojo_merchant'),
+      'instamojo_discount' => array(
+                   'type' => 'int',
+                   'size' => 'normal',
+                   'not null' => FALSE,
+                   'description' => 'This is the discount given to user - based on the promotion set by merchants'),
+	'instamojo_offer' => array(
+                   'type' => 'int',
+                   'size' => 'normal',
+                   'not null' => FALSE,
+                   'description' => 'This is the discount given to user - based on the promotion set by merchants'),
+	'instamojo_purpose' => array(
+                  'type' => 'text',
+                  'size' => 'normal',
+                  'length' => '145',
+                  'not null' => FALSE,
+                  'description' => 'Self Explanatory'),
+     
+	 'instamojo_firstname' => array(
+                   'type' => 'text',
+                   'size' => 'normal',
+                   'length' => '15',
+                   'not null' => FALSE,
+                   'description' => 'Self Explanatory'),
+	'instamojo_address' => array(
+                   'type' => 'text',
+                   'size' => 'normal',
+                   'length' => '15',
+                   'not null' => FALSE,
+                   'description' => 'Self Explanatory'),
+      'instamojo_email' => array(
+                   'type' => 'text',
+                   'size' => 'normal',
+                   'length' => '50',
+                   'not null' => FALSE,
+                   'description' => 'Self Explanatory'),
+      'instamojo_phone' => array(
+                  'type' => 'text',
+                  'size' => 'normal',
+                  'length' => '20',
+                  'not null' => FALSE, 'description' => 'Self Explanatory'),
+	'instamojo_city' => array('type' => 'text',
+                 'size' => 'normal',
+                 'length' => '20', 
+                 'not null' => FALSE,
+                 'description' => 'Self Explanatory'),
+      'instamojo_pin_code' => array(
+                'type' => 'text',
+                'size' => 'normal',
+                'length' => '20',
+                'not null' => FALSE,
+                'description' => 'Self Explanatory'),
+      'instamojo_billdate' => array(
+                 'type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE, 
+		'description' => 'Self Explanatory'),
+      'instamojo_txnid' => array(
+                 'type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE, 
+		'description' => 'Self Explanatory'),
+	'instamojo_billnumber' => array(
+                 'type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE, 
+		'description' => 'Self Explanatory'),
+      'instamojo_memberid' => array('type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE,
+                 'description' => 'Self Explanatory'),
+      	'instamojo_error' => array(
+                'type' => 'text',
+                'size' => 'normal',
+                'length' => '20', 'not null' => FALSE, 'description' => 'If transaction failed, then reason of failure'),
+	'instamojo_status' => array(
+                'type' => 'text',
+                'size' => 'normal',
+                'length' => '20', 'not null' => FALSE, 'description' => 'Stautus of the transaction'),
+  	'paidtime' => array(
+          'mysql_type' => 'timestamp',
+          'not null' => TRUE
+      )
+  ),
+ );
+   return $schema;
+}
