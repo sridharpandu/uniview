@@ -1,0 +1,3 @@
+2017-06-15 13:06:01 - mytest.com/api/atom?login=123&pass=123&ttype=NBFundTransfer&prodid=123&amt=&txncurr=123&txnscamt=123&clientcode=MTIz&txnid=903252&date=15/06/2017%2001:06:01&custacc=123
+2017-06-15 13:06:03 - 
+2017-06-15 13:06:03 - mytest.com/api/atom?&ttype=NBFundTransfer&tempTxnId=b05f2d451380bb2e3962&token=1234&txnStage=1

@@ -1,0 +1,16 @@
+uniview8_ebs:
+ path: '/ebs'
+ defaults:
+   _title: ''
+   _form: '\Drupal\uniview8_ebs\ebsRequest'
+ requirements:
+   _permission: 'access content'
+
+
+ebs.config:
+ path: '/admin/config/ebs/config'
+ defaults:
+   _form: '\Drupal\uniview8_ebs\Form\ConfigForm'
+   _title: 'Configuration'
+ requirements:
+   _permission: 'administer site configuration'

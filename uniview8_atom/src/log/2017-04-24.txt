@@ -1,0 +1,3 @@
+2017-04-24 12:34:43 - https://payment.atomtech.in/paynetz/epi/fts?login=160&pass=Test@123&ttype=NBFundTransfer&prodid=NSE&amt=&txncurr=INR&txnscamt=0&clientcode=aGpnaHU%3D&txnid=869575&date=24/04/2017%2012:04:43&custacc=jg
+2017-04-24 12:34:47 - 
+2017-04-24 12:34:47 - https://payment.atomtech.in/paynetz/epi/fts?&ttype=NBFundTransfer&tempTxnId=efc4d2cd8b8ffb72dae5&token=1234&txnStage=1

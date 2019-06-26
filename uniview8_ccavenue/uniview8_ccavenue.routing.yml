@@ -1,0 +1,16 @@
+uniview8_ccavenue:
+ path: '/ccavenue'
+ defaults:
+   _title: ''
+   _form: '\Drupal\uniview8_ccavenue\ccavenueRequest'
+ requirements:
+   _permission: 'access content'
+
+
+ccavenue.config:
+ path: '/admin/config/ccavenue/config'
+ defaults:
+   _form: '\Drupal\uniview8_ccavenue\Form\ConfigForm'
+   _title: 'Configuration'
+ requirements:
+   _permission: 'administer site configuration'

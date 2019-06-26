@@ -1,0 +1,4 @@
+Setup your webserver and put folder 'merchant' in it.
+Need to modify following paramters in broker/config.php
+	$Login = "" (ID provided by ATOM eg 10)
+	$Password = "" (Password provided by ATOM eg Test@12)

@@ -1,0 +1,86 @@
+2011-12-21 11:07:57 - http://203.114.240.77/paynetz/epi/fts?login=42186&pass=Test@123&ttype=NBFundTransfer&prodid=&amt=100&txncurr=INR&txnscamt=0&clientcode=MTIz&txnid=293609&date=21/12/2011 11:07:57&custacc=123456789012
+2011-12-21 11:07:57 - <html><head><title>JBossWeb/2.0.1.GA - Error report</title><style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 421 - Missing mandatory value for parameter - prodid</h1><HR size="1" noshade="noshade"><p><b>type</b> Status report</p><p><b>message</b> <u>Missing mandatory value for parameter - prodid</u></p><p><b>description</b> <u>Cannot find message associated with key http.421</u></p><HR size="1" noshade="noshade"><h3>JBossWeb/2.0.1.GA</h3></body></html>
+2011-12-21 11:08:28 - ?login=42186&pass=Test@123&ttype=NBFundTransfer&prodid=NSE&amt=100&txncurr=INR&txnscamt=0&clientcode=MTIz&txnid=632141&date=21/12/2011%2011:12:28&custacc=123456789012&bankid=6528
+2011-12-21 11:08:28 - 
+2011-12-21 11:08:28 - ?&ttype=NBFundTransfer&tempTxnId=&token=&txnStage=1
+2011-12-21 11:08:29 - ?login=42186&pass=Test@123&ttype=&prodid=&amt=&txncurr=INR&txnscamt=0&clientcode=&txnid=78552&date=21/12/2011%2011:12:29&custacc=&bankid=
+2011-12-21 11:08:29 - 
+2011-12-21 11:08:29 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2011-12-21 11:08:30 - ?login=42186&pass=Test@123&ttype=&prodid=&amt=&txncurr=INR&txnscamt=0&clientcode=&txnid=200408&date=21/12/2011%2011:12:30&custacc=&bankid=
+2011-12-21 11:08:30 - 
+2011-12-21 11:08:30 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2011-12-21 11:08:30 - ?login=42186&pass=Test@123&ttype=&prodid=&amt=&txncurr=INR&txnscamt=0&clientcode=&txnid=472198&date=21/12/2011%2011:12:30&custacc=&bankid=
+2011-12-21 11:08:30 - 
+2011-12-21 11:08:30 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2011-12-21 11:08:31 - ?login=42186&pass=Test@123&ttype=&prodid=&amt=&txncurr=INR&txnscamt=0&clientcode=&txnid=974914&date=21/12/2011%2011:12:31&custacc=&bankid=
+2011-12-21 11:08:31 - 
+2011-12-21 11:08:31 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2011-12-21 11:08:32 - ?login=42186&pass=Test@123&ttype=&prodid=&amt=&txncurr=INR&txnscamt=0&clientcode=&txnid=253692&date=21/12/2011%2011:12:32&custacc=&bankid=
+2011-12-21 11:08:32 - 
+2011-12-21 11:08:32 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2011-12-21 11:08:33 - ?login=42186&pass=Test@123&ttype=&prodid=&amt=&txncurr=INR&txnscamt=0&clientcode=&txnid=724853&date=21/12/2011%2011:12:33&custacc=&bankid=
+2011-12-21 11:08:33 - 
+2011-12-21 11:08:33 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2011-12-21 11:08:34 - ?login=42186&pass=Test@123&ttype=&prodid=&amt=&txncurr=INR&txnscamt=0&clientcode=&txnid=331634&date=21/12/2011%2011:12:34&custacc=&bankid=
+2011-12-21 11:08:34 - 
+2011-12-21 11:08:34 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2011-12-21 11:08:34 - ?login=42186&pass=Test@123&ttype=&prodid=&amt=&txncurr=INR&txnscamt=0&clientcode=&txnid=940093&date=21/12/2011%2011:12:34&custacc=&bankid=
+2011-12-21 11:08:34 - 
+2011-12-21 11:08:34 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2011-12-21 11:08:35 - ?login=42186&pass=Test@123&ttype=&prodid=&amt=&txncurr=INR&txnscamt=0&clientcode=&txnid=973815&date=21/12/2011%2011:12:35&custacc=&bankid=
+2011-12-21 11:08:35 - 
+2011-12-21 11:08:35 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2011-12-21 11:08:36 - ?login=42186&pass=Test@123&ttype=&prodid=&amt=&txncurr=INR&txnscamt=0&clientcode=&txnid=854309&date=21/12/2011%2011:12:36&custacc=&bankid=
+2011-12-21 11:08:36 - 
+2011-12-21 11:08:36 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2011-12-21 11:08:37 - ?login=42186&pass=Test@123&ttype=&prodid=&amt=&txncurr=INR&txnscamt=0&clientcode=&txnid=490234&date=21/12/2011%2011:12:37&custacc=&bankid=
+2011-12-21 11:08:37 - 
+2011-12-21 11:08:37 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2011-12-21 11:08:37 - ?login=42186&pass=Test@123&ttype=&prodid=&amt=&txncurr=INR&txnscamt=0&clientcode=&txnid=562744&date=21/12/2011%2011:12:37&custacc=&bankid=
+2011-12-21 11:08:37 - 
+2011-12-21 11:08:37 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2011-12-21 11:08:38 - ?login=42186&pass=Test@123&ttype=&prodid=&amt=&txncurr=INR&txnscamt=0&clientcode=&txnid=291687&date=21/12/2011%2011:12:38&custacc=&bankid=
+2011-12-21 11:08:38 - 
+2011-12-21 11:08:38 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2011-12-21 11:08:39 - ?login=42186&pass=Test@123&ttype=&prodid=&amt=&txncurr=INR&txnscamt=0&clientcode=&txnid=204467&date=21/12/2011%2011:12:39&custacc=&bankid=
+2011-12-21 11:08:39 - 
+2011-12-21 11:08:39 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2011-12-21 11:08:39 - ?login=42186&pass=Test@123&ttype=&prodid=&amt=&txncurr=INR&txnscamt=0&clientcode=&txnid=219512&date=21/12/2011%2011:12:39&custacc=&bankid=
+2011-12-21 11:08:39 - 
+2011-12-21 11:08:39 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2011-12-21 11:08:40 - ?login=42186&pass=Test@123&ttype=&prodid=&amt=&txncurr=INR&txnscamt=0&clientcode=&txnid=604736&date=21/12/2011%2011:12:40&custacc=&bankid=
+2011-12-21 11:08:40 - 
+2011-12-21 11:08:40 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2011-12-21 11:08:41 - ?login=42186&pass=Test@123&ttype=&prodid=&amt=&txncurr=INR&txnscamt=0&clientcode=&txnid=699798&date=21/12/2011%2011:12:41&custacc=&bankid=
+2011-12-21 11:08:41 - 
+2011-12-21 11:08:41 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2011-12-21 11:08:41 - ?login=42186&pass=Test@123&ttype=&prodid=&amt=&txncurr=INR&txnscamt=0&clientcode=&txnid=275299&date=21/12/2011%2011:12:41&custacc=&bankid=
+2011-12-21 11:08:41 - 
+2011-12-21 11:08:41 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2011-12-21 11:08:42 - ?login=42186&pass=Test@123&ttype=&prodid=&amt=&txncurr=INR&txnscamt=0&clientcode=&txnid=146331&date=21/12/2011%2011:12:42&custacc=&bankid=
+2011-12-21 11:08:42 - 
+2011-12-21 11:08:42 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2011-12-21 11:08:43 - ?login=42186&pass=Test@123&ttype=&prodid=&amt=&txncurr=INR&txnscamt=0&clientcode=&txnid=514099&date=21/12/2011%2011:12:43&custacc=&bankid=
+2011-12-21 11:08:43 - 
+2011-12-21 11:08:43 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2011-12-21 11:10:22 - http://203.114.240.77/paynetz/epi/fts?login=42186&pass=Test@123&ttype=NBFundTransfer&prodid=NSE&amt=100&txncurr=INR&txnscamt=0&clientcode=MTIz&txnid=977996&date=21/12/2011%2011:12:22&custacc=123456789012&bankid=6528
+2011-12-21 11:10:22 - <?xml version="1.0" encoding="UTF-8"?><MMP><MERCHANT><RESPONSE><url>http://203.114.240.77/paynetz/epi/fts</url><param name="ttype">NBFundTransfer</param><param name="tempTxnId">141627</param><param name="token">iQGO4bCNJngRLovrzJCAcxustG89Fa8nXo5WDHfp%2B7c%3D</param><param name="txnStage">1</param></RESPONSE></MERCHANT></MMP>
+2011-12-21 11:10:22 - http://203.114.240.77/paynetz/epi/fts?&ttype=NBFundTransfer&tempTxnId=141627&token=iQGO4bCNJngRLovrzJCAcxustG89Fa8nXo5WDHfp%2B7c%3D&txnStage=1
+2011-12-21 11:12:50 - http://203.114.240.77/paynetz/epi/fts?login=42186&pass=Test@123&ttype=CCFundTransfer&prodid=NSE&amt=100&txncurr=INR&txnscamt=0&clientcode=MTIz&txnid=634643&date=21/12/2011%2011:12:50&custacc=123456789012&bankid=6528
+2011-12-21 11:12:53 - <?xml version="1.0" encoding="UTF-8"?><MMP><MERCHANT><RESPONSE><url>http://203.114.240.77/paynetz/epi/fts</url><param name="ttype">CCFundTransfer</param><param name="tempTxnId">141628</param><param name="token">Fz9oTrLleJ%2F%2BOsibTUzb0peUnNUj55%2BL6ZBFLvZJ6nY%3D</param><param name="txnStage">1</param></RESPONSE></MERCHANT></MMP>
+2011-12-21 11:12:53 - http://203.114.240.77/paynetz/epi/fts?&ttype=CCFundTransfer&tempTxnId=141628&token=Fz9oTrLleJ%2F%2BOsibTUzb0peUnNUj55%2BL6ZBFLvZJ6nY%3D&txnStage=1
+2011-12-21 11:16:12 - http://203.114.240.77/paynetz/epi/fts?login=42186&pass=Test@123&ttype=NBFundTransfer&prodid=NSE&amt=100&txncurr=INR&txnscamt=0&clientcode=MTIz&txnid=963806&date=21/12/2011%2011:12:12&custacc=123456789012&bankid=6528
+2011-12-21 11:16:13 - <?xml version="1.0" encoding="UTF-8"?><MMP><MERCHANT><RESPONSE><url>http://203.114.240.77/paynetz/epi/fts</url><param name="ttype">NBFundTransfer</param><param name="tempTxnId">141629</param><param name="token">LzZRG69avwZ2VHiII3%2Fo7qRNsaU4EletwBdZJ6xklVM%3D</param><param name="txnStage">1</param></RESPONSE></MERCHANT></MMP>
+2011-12-21 11:16:13 - http://203.114.240.77/paynetz/epi/fts?&ttype=NBFundTransfer&tempTxnId=141629&token=LzZRG69avwZ2VHiII3%2Fo7qRNsaU4EletwBdZJ6xklVM%3D&txnStage=1
+2011-12-21 16:56:52 - http://203.114.240.77/paynetz/epi/fts?login=42186&pass=Test@123&ttype=NSE&prodid=&amt=100&txncurr=INR&txnscamt=0&clientcode=MTIz&txnid=998321&date=21/12/2011%2004:12:52&custacc=123456789012&bankid=
+2011-12-21 16:56:52 - <html><head><title>JBossWeb/2.0.1.GA - Error report</title><style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 900 - Incorrect Transaction Type</h1><HR size="1" noshade="noshade"><p><b>type</b> Status report</p><p><b>message</b> <u>Incorrect Transaction Type</u></p><p><b>description</b> <u>Cannot find message associated with key http.900</u></p><HR size="1" noshade="noshade"><h3>JBossWeb/2.0.1.GA</h3></body></html>
+2011-12-21 16:56:52 - http://203.114.240.77/paynetz/epi/fts?&ttype=NSE&tempTxnId=&token=HTTP Status 900 - Incorrect Transaction Type&txnStage=1
+2011-12-21 16:59:55 - http://203.114.240.77/paynetz/epi/fts?login=42186&pass=Test@123&ttype=NBFundTransfer&prodid=&amt=100&txncurr=INR&txnscamt=0&clientcode=MTIz&txnid=553283&date=21/12/2011%2004:12:55&custacc=123456789012
+2011-12-21 16:59:55 - <html><head><title>JBossWeb/2.0.1.GA - Error report</title><style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 421 - Missing mandatory value for parameter - prodid</h1><HR size="1" noshade="noshade"><p><b>type</b> Status report</p><p><b>message</b> <u>Missing mandatory value for parameter - prodid</u></p><p><b>description</b> <u>Cannot find message associated with key http.421</u></p><HR size="1" noshade="noshade"><h3>JBossWeb/2.0.1.GA</h3></body></html>
+2011-12-21 16:59:55 - http://203.114.240.77/paynetz/epi/fts?&ttype=NBFundTransfer&tempTxnId=&token=HTTP Status 421 - Missing mandatory value for parameter - prodid&txnStage=1
+2011-12-21 17:01:24 - http://203.114.240.77/paynetz/epi/fts?login=42186&pass=Test@123&ttype=NBFundTransfer&prodid=NSE&amt=100&txncurr=INR&txnscamt=0&clientcode=MTIz&txnid=461303&date=21/12/2011%2005:12:24&custacc=123456789012
+2011-12-21 17:01:24 - <?xml version="1.0" encoding="UTF-8"?><MMP><MERCHANT><RESPONSE><url>http://203.114.240.77/paynetz/epi/fts</url><param name="ttype">NBFundTransfer</param><param name="tempTxnId">141787</param><param name="token">cNQ9HPC8wBOyBE%2FJ%2BPvBFDICjwBeyV8kOdp48PKUKmE%3D</param><param name="txnStage">1</param></RESPONSE></MERCHANT></MMP>
+2011-12-21 17:01:24 - http://203.114.240.77/paynetz/epi/fts?&ttype=NBFundTransfer&tempTxnId=141787&token=cNQ9HPC8wBOyBE%2FJ%2BPvBFDICjwBeyV8kOdp48PKUKmE%3D&txnStage=1
+2011-12-21 17:02:19 - http://203.114.240.77/paynetz/epi/fts?login=42186&pass=Test@123&ttype=NBFundTransfer&prodid=NSE&amt=100&txncurr=INR&txnscamt=0&clientcode=MTIz&txnid=560424&date=21/12/2011%2005:12:19&custacc=123456789012
+2011-12-21 17:02:20 - <?xml version="1.0" encoding="UTF-8"?><MMP><MERCHANT><RESPONSE><url>http://203.114.240.77/paynetz/epi/fts</url><param name="ttype">NBFundTransfer</param><param name="tempTxnId">141789</param><param name="token">f5UUZSj3NCfY5yaorBg1WFpHYkSVXsDgJLhi4oHKL0w%3D</param><param name="txnStage">1</param></RESPONSE></MERCHANT></MMP>
+2011-12-21 17:02:20 - http://203.114.240.77/paynetz/epi/fts?&ttype=NBFundTransfer&tempTxnId=141789&token=f5UUZSj3NCfY5yaorBg1WFpHYkSVXsDgJLhi4oHKL0w%3D&txnStage=1

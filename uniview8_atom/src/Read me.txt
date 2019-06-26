@@ -1,0 +1,8 @@
+While moving to Production, kindly do the following changes:
+
+In congiguration file, please change the merchant Login,Password,productid
+
+and provide the below URL:
+https://payment.atomtech.in/paynetz/epi/fts
+
+
