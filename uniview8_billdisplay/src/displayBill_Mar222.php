@@ -18,7 +18,9 @@ use Drupal\menu_link_content\Entity\MenuLinkContent;
 class displayBill extends FormBase {
 
   public function getFormId() {
-	return 'uniview';
+   
+  
+ return 'uniview';
   }
 
 public function buildForm(array $form, FormStateInterface $form_state) {
@@ -55,49 +57,41 @@ $uniview_vendormessage = \Drupal::config('uniview_vendormessage')->get('uniview_
 $bill = $uniview_billlocation.'/'.$file;
 
 
+// XML
+$xml_doc = new DOMDocument();
+$xml_doc->load($bill);
+ 
+// XSL
+$xsl_doc = new DOMDocument();
+$xsl_doc->load($uniview_xslfile);
+
+// XSLT 
+$proc = new XSLTProcessor();
+$proc->importStylesheet($xsl_doc);
+
 $postdata = array('memberid' => $memberid);
 
 
-//foreach ($postdata as $records => $values) {
-//  $proc->setParameter('', $records, $values);
-//}
+foreach ($postdata as $records => $values) {
+  $proc->setParameter('', $records, $values);
+}
+
+$newdom = $proc->transformToDoc($xml_doc);
+
+$a = $newdom->saveXML($newdom->documentElement);
 
 $form['data'] = array(
       '#type' => 'markup',
       '#markup' =>  $a,
    );
 
-$output = db_query("select * from bill_details where memberid = :name and EXTRACT(YEAR_MONTH from billdate) = :billdate;", array(":name" => $memberid, ":billdate" => $file));
 
-//drupal_set_message("select * from bill_details where memberid = :name and EXTRACT(YEAR_MONTH from billdate) = ".$file);
-//$xmlbill = simplexml_load_file($bill);
+$xmlbill = simplexml_load_file($bill);
 
-foreach ($output as $member) {
-//    $row = simplexml_load_string($member->asXML());
-//    $memvalues = $row->xpath('//membernumber[. = ' . '"' . $memberid . '"' . ']');
-
-$form['table'] = array(
-      '#type' => '#markup',
-      '#markup' => '<table ><tr><th><center>'.$member->clubname.'</center></th></tr>
-			   <tr><th><center>'.$member->address.'</center></th></tr>
-			<tr><th><center>'.$member->city.'</center></th></tr>
-			<tr><th>'.$member->phone.'</th></tr>
-			<tr><td>'.$member->memberid.'</td></tr>
-                        <tr><td>'.$member->membername.'</td></tr>
-                        <tr><td>'.$member->memberaddress1.'</td></tr>
-                        <tr><td>'.$member->memberaddress2.'</td></tr>
-                        <tr><td>'.$member->membercity.'</td></tr>
-                        <tr><td>'.$member->memberpostalcode.'</td></tr>
-                        <tr><td>Mobile Number :'.$member->memberphonenumber.'</td></tr>
-			<tr><th>'.$member->title.'</th></tr>
-			<tr><th>'.$member->notes.'</th></tr>
-		   </table>',
-);
-
-
-
-
-  $memvalues = true;
+foreach ($xmlbill->xpath('//member') as $member) {
+    $row = simplexml_load_string($member->asXML());
+    $memvalues = $row->xpath('//membernumber[. = ' . '"' . $memberid . '"' . ']');
+   
  if ($memvalues) {
 
 $form['firstname'] = array(
@@ -141,30 +135,6 @@ $form['billnumber'] = array(
 );
  }
 }
-
-$outputs = db_query("select * from bill_details where memberid = :name and EXTRACT(YEAR_MONTH from billdate) = :billdate;", array(":name" => $memberid, ":billdate" => $file));
-
-$tbl_det = "<table>";
-$v = 0;
-foreach ($outputs as $members) {
-//    $row = simplexml_load_string($member->asXML());
-//    $memvalues = $row->xpath('//membernumber[. = ' . '"' . $memberid . '"' . ']');
-if ($v < 1)
-{
-$tbl_det .= '<tr><th>'.$member->columnh1.'</th><th>'.$member->columnh2.'</th><th>'.$member->columnh3.'</th><th>'.$member->columnh4.'</th></tr>';
-}
-
-$tbl_det .=  '<tr><td>'.$members->particular1.'</td><td>'.$members->amount1.'</td><td>'.$members->particular2.'</td><td>'.$members->amount2.'</td></tr>';
-$v++;
-}
-
-$tbl_det .= "</table>";
-
-$form['table_det'] = array(
-      '#type' => '#markup',
-      '#markup' => $tbl_det,
-	);
-
   
 $form['amounts'] = array(
       '#type' => 'textfield',

@@ -36,6 +36,7 @@ $dirhandle = opendir($uniview_billlocation);
     $filesavbl = '';
     $filearray = '';
     $i = 0;
+
     While (($filename = readdir($dirhandle)) !== false) {
       if ($filename != "." && $filename != "..") {
         if (strpos($filename, ".xml") !== false) {
@@ -48,19 +49,33 @@ $dirhandle = opendir($uniview_billlocation);
           $filesavbl = $filesavbl . ',' . $billmonth . ' ' . $billyear;
           $filearray = $filearray . ',' . $filename;
 
-        
-        } 
-	  } 
-  }  
-   
+        }
+	  }
+  }
+
+//$output = db_query("select CONCAT(CONCAT(EXTRACT(MONTH FROM billdate) ,' '), EXTRACT(YEAR FROM billdate)) as billdate  from bill_details group  by CONCAT(CONCAT(EXTRACT(MONTH FROM billdate), ' '), EXTRACT(YEAR FROM billdate));");
+$output = db_query("select EXTRACT(YEAR_MONTH FROM billdate) as billdate  from bill_details group  by EXTRACT(YEAR_MONTH FROM billdate)");
+
+//f = "";
+//foreach ($output as $ans)
+//{
+//$bills = $ans->billdate.",";
+//}
+//drupal_set_message($filesavbl);
 
   /* Creating the string of file names introduces a comma (,) in the front because the $filesavbl variable is null in the first iteration. This should be removed */
   $filesavbl = substr($filesavbl, 1);
 
-  $options = explode(",", $filesavbl);
+//drupal_set_message($filesavbl);
+//drupal_set_message($bills);
+//$filesavbl = $bills;
+ 
+  $options = explode(",", $bills);
   $filearray = substr($filearray, 1);
   natsort($options);
   $count1 = count($options);
+
+
 
 //  $options = array_reverse($options);
 
@@ -110,48 +125,48 @@ $dirhandle = opendir($uniview_billlocation);
 $files = preg_grep('~\.(xml)$~', scandir($uniview_billlocation));
 
 $options = array();
-foreach ($files as $values) {   
-   
-  $billyear = substr($values, 0, 4);
-  $billmonth = substr($values, 4, 2);
 
+foreach ($output as $values) {
+
+  $billyear = substr($values->billdate, 0, 4);
+  $billmonth = substr($values->billdate, 4, 2);
 
 switch ($billmonth) {
       case '01':
-        $options[$values] = "January ".$billyear;
+        $options[$values->billdate] = "January ".$billyear;
         break;
       case '02':
-        $options[$values] = "February ".$billyear;
+        $options[$values->billdate] = "February ".$billyear;
         break;
       case '03':
-        $options[$values] = "March ".$billyear;
+        $options[$values->billdate] = "March ".$billyear;
         break;
       case '04':
-        $options[$values] = "April ".$billyear;
+        $options[$values->billdate] = "April ".$billyear;
         break;
       case '05':
-        $options[$values] = "May ".$billyear;
+        $options[$values->billdate] = "May ".$billyear;
         break;
       case '06':
-        $options[$values] = "June ".$billyear;
+        $options[$values->billdate] = "June ".$billyear;
         break;
       case '07':
-        $options[$values] = "July ".$billyear;
+        $options[$values->billdate] = "July ".$billyear;
         break;
       case '08':
-        $options[$values] = "August ".$billyear;
+        $options[$values->billdate] = "August ".$billyear;
         break;
       case '09':
-        $options[$values] = "September ".$billyear;
+        $options[$values->billdate] = "September ".$billyear;
         break;
       case '10':
-        $options[$values] = "October ".$billyear;
+        $options[$values->billdate] = "October ".$billyear;
         break;
       case '11':
-        $options[$values] = "November ".$billyear;
+        $options[$values->billdate] = "November ".$billyear;
         break;
       case '12':
-        $options[$values] = "December ".$billyear;
+        $options[$values->billdate] = "December ".$billyear;
         break;
 
    }

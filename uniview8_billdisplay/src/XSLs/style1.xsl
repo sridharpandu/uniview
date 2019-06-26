@@ -6,7 +6,6 @@
 <html>
 
  <body>
-  <h1>Club Details,</h1>
   <table border="1" width="100%" style="border-collapse: collapse;" id="xdoctable"> 
 	<tr>
         <td><div align="center"><xsl:value-of select="bill/clubname"/></div></td>
@@ -24,7 +23,6 @@
   </table>
 
   <xsl:for-each select="bill/member[membernumber=$memberid]">
-   <h1>Your Info,</h1>
    <table border="1" width="100%" style="border-collapse: collapse;" id="xdoctable"> 
 	<tr>
         <td width="50px"><div align="center"><xsl:value-of select="membername"/></div></td>
@@ -36,7 +34,7 @@
  	<tr >
         <td width="50px"><div align="center"><xsl:value-of select="membernumber"/></div></td>
 	
-        <td width="50px"><div align="center"><xsl:value-of select="billnumber"/></div></td>
+        <td width="107px"><div align="center"><xsl:value-of select="billnumber"/></div></td>
 	</tr>
    </table>
    <table border="1" width="100%" style="border-collapse: collapse;" id="xdoctable"> 
@@ -50,7 +48,7 @@
 	</tr>
     </table>
 
-   <p style="font-size: ">Bill Information,</p>
+ <h5>Bill Information,</h5>
  <xsl:for-each select="line">
    <table border="1" width="100%" style="border-collapse: collapse;" id="xdoctable"> 
 	<tr>
@@ -58,8 +56,8 @@
         <td colspan="2" width="50px"><div align="center"><xsl:value-of select="amount1"/></div></td>   
 	<xsl:choose>
       <xsl:when test="particular2 != ''">
-       <td colspan="2" width="100px"><div align="center"><xsl:value-of select="particular2"/></div></td>
-        <td colspan="2" width="100px"><div align="center"><xsl:value-of select="amount2"/></div></td>
+       <td colspan="2" width="150px"><div align="center"><xsl:value-of select="particular2"/></div></td>
+        <td colspan="2" width="187px"><div align="center"><xsl:value-of select="amount2"/></div></td>
 </xsl:when>
     </xsl:choose>
 	</tr>

@@ -1,0 +1,75 @@
+<?php
+namespace Drupal\uniview8_billdisplay;
+
+use DOMDocument;
+use XSLTProcessor;
+use SimpleXMLElement;
+use Drupal\Core\Form\FormBase;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Component\Utility\SafeMarkup;
+use Drupal\Core\Routing\TrustedRedirectResponse;
+use Drupal\Core\Url;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Drupal\Component\Utility\Html;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+
+class voucherdetails extends FormBase {
+
+  public function getFormId() {
+
+
+ return 'uniview';
+  }
+
+
+
+public function buildForm(array $form, FormStateInterface $form_state) {
+
+
+$userCurrent = \Drupal::currentUser();
+    $user = \Drupal\user\Entity\User::load($userCurrent->id());
+    $memberid = $user->getUsername();
+
+$vno = $_GET['vno'];
+/*
+  $voucher_query = db_select('voucher_dtl', 'v')
+    ->fields('v')
+    ->condition('voucherno', $vno, '=')
+    ->execute()->fetchAll(); */
+  if ($result_query) {
+    $table_data = '<h3>Top usages & defaulters</h3><table id="voucher_list" class="responsive-enabled table table-bordered table-striped table-hover responsive"><tr><th>member id</th><th>Amount</th><th>memberid</th><th>Amount</th></tr>';
+
+    foreach ($result_query as $row) {
+      $table_data .= '<tr><td>' . $row->voucherno . '</td><td class="txt-center">' . date('d/m/Y', strtotime($row->voucherdate)) . '</td><td 
+class="txt-center">' . 
+$row->description . 
+'</td><td 
+class="money_right">' . $row->qty . '</td><td class="money_right">' . $row->rate .  '</td><td class="money_right">' . $row->amount . '</td><td class="money_right">' . $row->taxamount .'</td><td class="money_right">' . $row->total . '</td></tr>'; 
+    }
+    $table_data .= '</table>';  
+    $form['print_table'] = array(
+      '#markup' => $table_data,
+    );
+}
+else
+{
+    drupal_set_message('No vouchers found for the user..', 'warning');
+}
+
+return $form;
+
+
+}
+
+function submitForm(array &$form, FormStateInterface $form_state) {
+
+return $form;
+}
+ 
+
+function validateForm(array &$form, FormStateInterface $form_state) {
+return $form;
+}
+}
+

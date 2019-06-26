@@ -4,6 +4,7 @@ namespace Drupal\uniview8_billdisplay;
 use DOMDocument;
 use XSLTProcessor;
 use SimpleXMLElement;
+
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Component\Utility\SafeMarkup;
@@ -14,26 +15,13 @@ use Symfony\Component\HttpFoundation\Response;
 use Drupal\Component\Utility\Html;
 use Drupal\menu_link_content\Entity\MenuLinkContent;
 
-class vouchers extends FormBase {
+class displayBill extends FormBase {
 
   public function getFormId() {
 
 
  return 'uniview';
   }
-
-
-
-
-/*function voucherinfo_help($path, $arg) {
-  $output = '';
-  switch ($path) {
-    case "admin/help#voucherinfo":
-      $output = '<p>' . t("Displays the vouchers foreach member") . '</p>';
-      break;
-  }
-  return $output;
-} */
 
 public function buildForm(array $form, FormStateInterface $form_state) {
 
@@ -86,11 +74,11 @@ class="money_right">' . $prow->uha_amount . '</td></tr>';
     ->condition('member_id', $memberid, '=')
     ->execute()->fetchAll();
   if ($voucher_query) {
-    $table_data = '<h3>Available Vouchers</h3><table id="voucher_list" class="responsive-enabled table table-bordered table-striped table-hover responsive"><tr><th>Voucher Number</th><th>Voucher 
+    $table_data = '<h3>Available Vouchers</h3><table id="voucher_list"><tr><th>Voucher Number</th><th>Voucher 
 Date</th><th>Description</th><th>Debit</th><th>Credit</th></tr>';
 
     foreach ($voucher_query as $row) {
-      $table_data .= '<tr><td><a href="/voucherdetails?vno=' . $row->voucher_number . '">'. $row->voucher_number . '</a></td><td class="txt-center">' . date('d/m/Y', strtotime($row->voucher_date)) . '</td><td 
+      $table_data .= '<tr><td>' . $row->voucher_number . '</td><td class="txt-center">' . date('d/m/Y', strtotime($row->voucher_date)) . '</td><td 
 class="txt-center">' . 
 $row->voucher_description . 
 '</td><td 
@@ -118,18 +106,18 @@ class="money_right">' . $row->voucher_debit . '</td><td class="money_right">' . 
       '#title' => 'Balance (Rs.)',
       '#size' => 7,
       '#default_value' => number_format($outstanding_balance, 2),
-//     '#disabled' => TRUE
+      '#disabled' => TRUE
     );
   }
   else {
     drupal_set_message('Unable to retrieve Balance.', 'warning');
   }
-  $form['amounts'] = array(
+  $form['amount'] = array(
     '#type' => 'textfield',
     '#title' => 'Outstanding Amount (Rs.)',
     '#size' => 7,
     '#default_value' => number_format($outstanding_balance - $final_amount, 2),
-//    '#disabled' => TRUE
+    '#disabled' => TRUE
   );
   $form['member_id'] = array(
     '#type' => 'hidden',
@@ -153,7 +141,7 @@ $form['memberid'] = array(
   );
 
 
- $form['amount'] = array(
+ $form['amounts'] = array(
     '#type' => 'hidden',
     '#value' => number_format($outstanding_balance - $final_amount, 2),
   );
@@ -180,18 +168,20 @@ $form['#method'] = 'POST';// USE POST INSTEAD OF GET TO PASS VALUES
 
 return $form;
 
+ }
 
+function validateForm(array &$form, FormStateInterface $form_state) {
+
+return $form;
 }
 
 function submitForm(array &$form, FormStateInterface $form_state) {
 
 return $form;
+
 }
+
+}
+
+
  
-
-function validateForm(array &$form, FormStateInterface $form_state) {
-return $form;
-}
-}
-
-

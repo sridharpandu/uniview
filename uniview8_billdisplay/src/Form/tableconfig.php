@@ -33,8 +33,8 @@ $form['tablename'] = array(
 
 $table = $config->get('tablename');
 
-
-/*$query = db_query("desc $table");
+/*
+$query = db_query("desc $table");
 $name = array();
 foreach($query as $values){
 $field = $values->Field;
@@ -42,7 +42,7 @@ $field = $values->Field;
 array_push($name, $field);
 //drupal_set_message($field);
 }
-/*
+
 $form['field1'] = array(
 	'#type' => 'select',
 	'#options' => array($name),
