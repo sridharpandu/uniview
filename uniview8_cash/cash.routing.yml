@@ -1,0 +1,76 @@
+cash:
+ path: '/cash'
+ defaults:
+   _title: ''
+   _form: '\Drupal\cash\cash'
+ requirements:
+   _permission: 'access content'
+   _user_is_logged_in: 'TRUE'
+
+
+Cash.config:
+ path: '/admin/config/cash/config'
+ defaults:
+   _form: '\Drupal\cash\Form\ConfigForm'
+   _title: 'Configuration'
+ requirements:
+   _permission: 'administer site configuration'
+
+
+cash_payu:
+ path: '/cashpayu'
+ defaults:
+   _title: ''
+   _form: '\Drupal\cash\cashpayuRequest'
+ requirements:
+   _permission: 'access content'
+
+
+cash_payu.config:
+ path: '/admin/config/payu/config'
+ defaults:
+   _form: '\Drupal\cash\Form\ConfigFormpay'
+   _title: 'Configuration'
+ requirements:
+   _permission: 'administer site configuration'
+
+
+cash.success:
+ path: '/success'
+ defaults:
+   _title: ''
+   _form: '\Drupal\cash\success'
+ requirements:
+   _permission: 'access content'
+
+cash.failure:
+ path: '/failure'
+ defaults:
+   _title: ''
+   _form: '\Drupal\cash\failure'
+ requirements:
+   _permission: 'access content'
+
+cash.cancel:
+ path: '/cancel'
+ defaults:
+   _title: ''
+   _form: '\Drupal\cash\cancel'
+ requirements:
+   _permission: 'access content'
+
+cash.tout:
+ path: '/tout'
+ defaults:
+   _title: ''
+   _form: '\Drupal\cash\tout'
+ requirements:
+   _permission: 'access content'
+
+cash.report:
+ path: '/mypayments'
+ defaults:
+   _title: ''
+   _form: '\Drupal\cash\report'
+ requirements:
+   _permission: 'access content'

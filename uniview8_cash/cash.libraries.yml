@@ -1,0 +1,13 @@
+drupal.cash:
+  version: VERSION
+  js:
+    js/cash.js: {}
+  css:
+    component:
+      css/cash.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/underscore
+    
+

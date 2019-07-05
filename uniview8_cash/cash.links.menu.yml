@@ -1,0 +1,11 @@
+cash.admin_item_1:
+  title: 'Payu configuration'
+  parent: system.admin
+  description: 'Pay Subscription.'
+  route_name: cash_payu.config
+
+cash.admin_item_2:
+  title: 'cash & carry configuration'
+  parent: system.admin
+  description: 'Enter bill details.'
+  route_name: Cash.config
