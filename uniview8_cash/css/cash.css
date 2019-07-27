@@ -135,6 +135,10 @@ font-weight: bold;
 text-align: center;
 }
 
+.fac 
+{
+visibility:hidden;
+}
  table {
   border-collapse: collapse;
 width: 92.5%;

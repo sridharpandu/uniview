@@ -66,7 +66,7 @@ $member = db_select('cnc_subscription_due2')
  $form['outstanding'] = array(
     '#type' => 'markup',
     //'#markup' => '<b>Outstanding (Rs.)  </b>',
-    '#markup' => '<b>Outstanding - FY 2016-17 Annual Subscription and other arrears </b>',
+    '#markup' => '<b>Outstanding - Annual Subscription and other arrears </b>',
     '#prefix' => "<div id='tabdiv'><table><tr><td>",
     '#suffix' => '</td>',
   );
@@ -230,6 +230,18 @@ $a = $form_state->getValue('advance_value');
     //'#return_value' => $a,
     //'#disabled' => TRUE,
     '#attributes' => array('readonly' => 'readonly'),
+  );
+
+$form['facility'] = array(
+    '#type' => 'textfield',
+  // '#id' => 'amounts',
+    '#prefix' => '<td>',
+    '#suffix' => '</td></tr></table>',
+    '#size' => 9,
+    '#return_value' => '',
+    //'#return_value' => $a,
+    //'#disabled' => TRUE,
+ '#attributes' => array('readonly' => 'readonly','class' =>array('fac')),
   );
 
 
