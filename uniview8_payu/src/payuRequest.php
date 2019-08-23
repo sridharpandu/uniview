@@ -65,6 +65,7 @@ $member_name = $ans["membername"];
 
 $Phone_No = \Drupal::request()->query->get('phone');
 $email_id = \Drupal::request()->query->get('email');
+$facilit = \Drupal::request()->query->get('facility');
 $Transaction_Desc = 'active';
 $productinfo = 'delivered';
 
@@ -353,6 +354,17 @@ $form['txt14'] = array(
   '#suffix' => "<br /><br />",
   );
 
+$form['txt15'] = array(
+  '#type' => 'markup',
+  '#markup' => '<b>Facility Selected :</b>',
+  );
+
+$form['facility'] = array(
+  '#type' => 'markup',
+  '#markup' => $facilit,
+  '#suffix' => "<br /><br />",
+  );
+
 $form['end2'] = array(
   '#type' => 'markup',
   '#markup' => "<h2></h2>",
@@ -454,9 +466,36 @@ $payu_country = $country;
 $payu_zip_code = $zipcode;
 $payu_pg = $payu_DefaultTab;
 $payu_billnumber = $payu_billnumber;
+$payu_facility = $facilit;
 //print_r($payu_amount);
 
-payuStorage::insert(SafeMarkup::checkPlain($payu_key),SafeMarkup::checkPlain($payu_txnid),SafeMarkup::checkPlain($payu_amount), SafeMarkup::checkPlain($payu_firstname),SafeMarkup::checkPlain($payu_email),SafeMarkup::checkPlain($payu_phone),SafeMarkup::checkPlain($payu_product_info), SafeMarkup::checkPlain($payu_serviceprovider),SafeMarkup::checkPlain($payu_billdate),SafeMarkup::checkPlain($payu_billnumber),SafeMarkup::checkPlain($payu_memberid),SafeMarkup::checkPlain($payu_transactiondesc),SafeMarkup::checkPlain($payu_city), SafeMarkup::checkPlain($payu_country), SafeMarkup::checkPlain($payu_zip_code),SafeMarkup::checkPlain($payu_pg));
+payuStorage::insert(SafeMarkup::checkPlain($payu_key),SafeMarkup::checkPlain($payu_txnid),SafeMarkup::checkPlain($payu_amount), SafeMarkup::checkPlain($payu_firstname),SafeMarkup::checkPlain($payu_email),SafeMarkup::checkPlain($payu_phone),SafeMarkup::checkPlain($payu_product_info), SafeMarkup::checkPlain($payu_serviceprovider),SafeMarkup::checkPlain($payu_billdate),SafeMarkup::checkPlain($payu_billnumber),SafeMarkup::checkPlain($payu_memberid),SafeMarkup::checkPlain($payu_transactiondesc),SafeMarkup::checkPlain($payu_city),SafeMarkup::checkPlain($payu_state), SafeMarkup::checkPlain($payu_country), SafeMarkup::checkPlain($payu_zip_code),SafeMarkup::checkPlain($payu_pg), SafeMarkup::checkPlain($payu_facility));
+
+ $form['udf1'] = array(
+  '#type' => 'hidden',
+//  '#type' => 'textfield',
+  '#value' => $payu_firstname,
+  );
+  $form['udf2'] = array(
+  '#type' => 'hidden',
+//  '#type' => 'textfield',
+  '#value' => $payu_memberid,
+  );
+ $form['udf3'] = array(
+  '#type' => 'hidden',
+//  '#type' => 'textfield',
+  '#value' => $payu_phone,
+   );
+  $form['udf4'] = array(
+  '#type' => 'hidden',
+//  '#type' => 'textfield',
+  '#value' => $payu_city,
+  );
+  $form['udf5'] = array(
+  '#type' => 'hidden',
+//  '#type' => 'textfield',
+  '#value' => $payu_email,
+  );
 
 $form['#action'] = '/modules/uniview8_payu/src/payuform.php';
 

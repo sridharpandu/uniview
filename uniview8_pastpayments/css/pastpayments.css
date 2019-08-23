@@ -1,0 +1,105 @@
+.btnn {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+border-radius: 5%;
+padding: 32px 50px;
+float: left;
+margin-left: 0px;
+margin-top: 30px;
+}
+
+.mybut {
+background-color: #008CBA;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+border-radius: 5%;
+padding: 19px 38px;
+float: left;
+margin-left: 0px;
+margin-top: 30px;
+
+}
+
+
+#invtable  td
+{
+  border: 0;
+}
+.table
+{
+  border-collapse:collapse;
+  border: 0;
+}
+
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+/*  border: 1px solid #ddd;*/
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #c9edc4;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+.mybtn1{
+  background-color: rgb(56, 123, 224);
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+border-radius: 5%;
+padding:20px 50px;
+float: left;
+margin-left: 0px;
+margin-top: 30px;
+}
+
+
+
+.cst{
+  background-color: rgb(56, 123, 224);
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 11px;
+  margin: 4px 2px;
+  cursor: pointer;
+border-radius: 5%;
+padding:27px 47px;
+float: left;
+margin-left: 0px;
+margin-top: 30px;
+}

@@ -42,7 +42,7 @@ $minDate = \Drupal::request()->query->get('set_start_date');
 $maxDate = \Drupal::request()->query->get('set_end_date');
 $table = \Drupal::config('table.settings')->get('tablename');
 
-$split = str_split('_', $table);
+$split = explode('_', $table, 3);
 $pgname = $split['1'];
 $query = db_query("desc $table");
 $name = array();

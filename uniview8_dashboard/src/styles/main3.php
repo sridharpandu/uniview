@@ -290,7 +290,7 @@ div.css_bar_graph div.graph li.bar span
 /* ------ bars positions ------ */
 div.css_bar_graph div.graph li.nr_1
 	{
-	left: 110px;
+	left: 100px;
 	height: <?php echo $_GET['height1']?$_GET['height1']:0 ."px" ?>;
 	}
 	

@@ -4,7 +4,7 @@ uniview8_pastpayments:
    _title: 'Pastpayments'
    _form: '\Drupal\uniview8_pastpayments\Form\uniview8_pastpayments'
  requirements:
-   _permission: 'access content'
+   _permission: 'administer site configuration'
    _user_is_logged_in: 'TRUE'
 
 uniview8:
@@ -15,3 +15,22 @@ uniview8:
   requirements:
     _permission: 'access content'
     _user_is_logged_in: 'TRUE'
+
+uniview8_dashboard:
+  path: '/paymentsdashboard'
+  defaults:
+    _title: 'Dashboard'
+    _controller: '\Drupal\uniview8_pastpayments\Controller\uniview8PastpaymentDashbaord::entryList'
+  requirements:
+    _permission: 'access content'
+    _user_is_logged_in: 'TRUE'
+
+uniview8_admin:
+ path: '/pastpaymentsadmin'
+ defaults:
+   _title: 'Pastpayments'
+   _form: '\Drupal\uniview8_pastpayments\Form\uniview8_pastpaymentsadmin'
+ requirements:
+   _permission: 'access content'
+   _user_is_logged_in: 'TRUE'
+
