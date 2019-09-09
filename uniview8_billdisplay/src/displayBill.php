@@ -76,6 +76,7 @@ foreach ($output as $member) {
 //    $row = simplexml_load_string($member->asXML());
 //    $memvalues = $row->xpath('//membernumber[. = ' . '"' . $memberid . '"' . ']');
 
+$bldate = $member->billdate;
 $form['table'] = array(
       '#type' => '#markup',
       '#markup' => '<table ><tr><th><center>'.$member->clubname.'</center></th></tr>
@@ -156,6 +157,11 @@ $tbl_det .= '<tr><th>'.$member->columnh1.'</th><th>'.$member->columnh2.'</th><th
 
 $tbl_det .=  '<tr><td>'.$members->particular1.'</td><td>'.$members->amount1.'</td><td>'.$members->particular2.'</td><td>'.$members->amount2.'</td></tr>';
 $v++;
+if($members->particular1 == "TOTAL BILL AMOUNT")
+{
+$amt = $members->amount1;
+}
+
 }
 
 $tbl_det .= "</table>";
@@ -177,10 +183,47 @@ $form['amounts'] = array(
 $form['#action'] ='/airpay';
 $form['#method'] = 'POST';// USE POST INSTEAD OF GET TO PASS VALUES
 
+$balance = 5;
+//$qry = db_query("select sum(amount1) - sum(airpay_amount) as total from (select amount1, memberid from bill_details where memberid  = :mid and DATE_FORMAT(billdate, '%Y-%m') = :billdate and particular1 in ('TOTAL BILL AMOUNT')) a join ( select airpay_amount, airpay_memberid from uniview8_airpay_response where airpay_memberid  = :mid and DATE_FORMAT(paidtime , '%Y-%m') = :paiddate) b on memberid = airpay_memberid;", array(":mid" => $memberid, ":billdate" => date('Y-m', strtotime("+0 months", strtotime($bldate))), ":paiddate" => date('Y-m', strtotime("+1 months", strtotime($bldate)))));
+$qry = db_query("select  IFNULL(sum(amount1) - sum(airpay_amount), 'ENABLE') as total from bill_details a left join uniview8_airpay_response b on a.memberid = b.airpay_memberid where a.memberid  = :mid and DATE_FORMAT(a.billdate, '%Y-%m') = :billdate and a.particular1 in ('TOTAL BILL AMOUNT') and DATE_FORMAT(b.paidtime , '%Y-%m') = :paiddate and airpay_status = 'S';", array(":mid" => $memberid, ":billdate" => date('Y-m', strtotime("+0 months", strtotime($bldate))), ":paiddate" => date('Y-m', strtotime("+1 months", strtotime(date("Y-m", strtotime($bldate))."-01")))));
+
+//drupal_set_message(date("Y-m", strtotime($bldate))."-01");
+foreach ($qry as $v)
+{
+//print_r($v);
+if($v->total == "ENABLE")
+{
+$balance = 5;
+} else {
+$balance = $v->total;
+}
+
+}
+
+$crdate = date("Ym", strtotime("-1 months", strtotime(date("Y-m-d"))));
+$bldte = date("Ym", strtotime("+0 months", strtotime($bldate)));
+
+//drupal_set_message($crdate.' '.$bldte);
+
+if(($crdate == $bldte) && ($balance > 0))
+{
+
  $form['submit'] = array(
       '#type' => 'submit',
       '#value' => t('Proceed to pay'),
     );
+}
+else
+{
+$form['submit'] = array(
+      '#type' => 'submit',
+      '#value' => t('Proceed to pay'),
+      '#disabled' => 'disabled',
+   );
+}
+
+
+
 
 return $form;
 
