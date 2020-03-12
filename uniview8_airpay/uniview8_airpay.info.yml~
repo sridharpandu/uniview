@@ -1,0 +1,5 @@
+name: Uniview8 WorldLine
+description: Worldline Payment Integration
+package: Sastra
+type: module
+core: 8.x

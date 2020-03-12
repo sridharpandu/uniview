@@ -1,0 +1,39 @@
+uniview8_payu:
+ path: '/payu'
+ defaults:
+   _title: ''
+   _form: '\Drupal\uniview8_payu\payuRequest'
+ requirements:
+   _permission: 'access content'
+
+uniview8_payusuccess:
+ path: '/payusuccess'
+ defaults:
+   _title: ''
+   _form: '\Drupal\uniview8_payu\payuSuccess'
+ requirements:
+   _permission: 'access content'
+
+uniview8_payucancel:
+ path: '/payucancel'
+ defaults:
+   _title: ''
+   _form: '\Drupal\uniview8_payu\payucancel'
+ requirements:
+   _permission: 'access content'
+
+uniview8_payufailed:
+ path: '/payufailed'
+ defaults:
+   _title: ''
+   _form: '\Drupal\uniview8_payu\payufailed'
+ requirements:
+   _permission: 'access content'
+
+payu.config:
+ path: '/admin/config/payu/config'
+ defaults:
+   _form: '\Drupal\uniview8_payu\Form\ConfigForm'
+   _title: 'Configuration'
+ requirements:
+   _permission: 'administer site configuration'

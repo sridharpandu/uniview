@@ -1,0 +1,3 @@
+2011-02-07 12:26:55 - http://203.114.240.77/paynetz/epi/fts?login=42186&pass=Test@123&ttype=NBFundTransfer&prodid=NSE&amt=100&txncurr=INR&txnscamt=0&clientcode=MTIz&txnid=59986&date=07/02/2011 12:26:55&custacc=123456789012&bankid=6528
+2011-02-07 12:26:55 - <?xml version="1.0" encoding="UTF-8"?><MMP><MERCHANT><RESPONSE><url>http://203.114.240.77/paynetz/epi/fts</url><param name="ttype">NBFundTransfer</param><param name="tempTxnId">9683</param><param name="token">XLOABfcfATwpFg6vRyGClO52UXyhCKsP1d8xSwJLHNQ%3D</param><param name="txnStage">1</param></RESPONSE></MERCHANT></MMP>
+2011-02-07 12:26:55 - http://203.114.240.77/paynetz/epi/fts?&ttype=NBFundTransfer&tempTxnId=9683&token=XLOABfcfATwpFg6vRyGClO52UXyhCKsP1d8xSwJLHNQ%3D&txnStage=1

@@ -1,0 +1,10 @@
+2014-05-21 16:08:57 - http://203.114.240.77/paynetz/epi/fts?login=160&pass=Test@123&ttype=&prodid=&amt=&txncurr=INR&txnscamt=0&clientcode=&txnid=245156&date=21/05/2014%2004:05:57&custacc=
+2014-05-21 16:10:00 - 
+2014-05-21 16:10:00 - http://203.114.240.77/paynetz/epi/fts?&ttype=&tempTxnId=&token=&txnStage=1
+2014-05-21 16:20:35 - http://203.114.240.77/paynetz/epi/fts?login=160&pass=Test@123&ttype=&prodid=&amt=&txncurr=INR&txnscamt=0&clientcode=&txnid=946803&date=21/05/2014%2004:05:35&custacc=
+2014-05-21 16:21:38 - 
+2014-05-21 16:21:38 - http://203.114.240.77/paynetz/epi/fts?&ttype=&tempTxnId=&token=&txnStage=1
+2014-05-21 16:22:28 - http://203.114.240.77/paynetz/epi/fts?login=160&pass=Test@123&ttype=NBFundTransfer&prodid=NSE&amt=1564&txncurr=INR&txnscamt=0&clientcode=MTIz&txnid=479438&date=21/05/2014%2004:05:28&custacc=123456789012
+2014-05-21 16:23:31 - 
+2014-05-21 16:23:31 - http://203.114.240.77/paynetz/epi/fts?&ttype=NBFundTransfer&tempTxnId=&token=&txnStage=1
+2014-05-21 16:24:07 - http://203.114.240.77/paynetz/epi/fts?login=160&pass=Test@123&ttype=NBFundTransfer&prodid=NSE&amt=1564&txncurr=INR&txnscamt=0&clientcode=MTIz&txnid=812951&date=21/05/2014%2004:05:07&custacc=123456789012

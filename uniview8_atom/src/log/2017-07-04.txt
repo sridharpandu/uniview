@@ -1,0 +1,126 @@
+2017-07-04 12:52:32 - ?login=&pass=&ttype=NBFundTransfer&prodid=&amt=&txncurr=&txnscamt=&clientcode=MjI0&txnid=884489&date=04/07/2017%2012:07:32&custacc=vdsfg5345
+2017-07-04 12:52:32 - 
+2017-07-04 12:52:32 - ?&ttype=NBFundTransfer&tempTxnId=6f0f8ac882d377d463c9&token=1234&txnStage=1
+2017-07-04 12:52:33 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=674831&date=04/07/2017%2012:07:33&custacc=
+2017-07-04 12:52:33 - 
+2017-07-04 12:52:33 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:33 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=703847&date=04/07/2017%2012:07:33&custacc=
+2017-07-04 12:52:33 - 
+2017-07-04 12:52:33 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:33 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=541591&date=04/07/2017%2012:07:33&custacc=
+2017-07-04 12:52:33 - 
+2017-07-04 12:52:33 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:33 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=542406&date=04/07/2017%2012:07:33&custacc=
+2017-07-04 12:52:33 - 
+2017-07-04 12:52:33 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:33 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=465695&date=04/07/2017%2012:07:33&custacc=
+2017-07-04 12:52:33 - 
+2017-07-04 12:52:33 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:33 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=9258&date=04/07/2017%2012:07:33&custacc=
+2017-07-04 12:52:33 - 
+2017-07-04 12:52:33 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:33 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=725665&date=04/07/2017%2012:07:33&custacc=
+2017-07-04 12:52:33 - 
+2017-07-04 12:52:33 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:33 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=582253&date=04/07/2017%2012:07:33&custacc=
+2017-07-04 12:52:33 - 
+2017-07-04 12:52:33 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:33 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=315484&date=04/07/2017%2012:07:33&custacc=
+2017-07-04 12:52:33 - 
+2017-07-04 12:52:33 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:33 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=50231&date=04/07/2017%2012:07:33&custacc=
+2017-07-04 12:52:33 - 
+2017-07-04 12:52:33 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:33 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=678454&date=04/07/2017%2012:07:33&custacc=
+2017-07-04 12:52:33 - 
+2017-07-04 12:52:33 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:33 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=850436&date=04/07/2017%2012:07:33&custacc=
+2017-07-04 12:52:33 - 
+2017-07-04 12:52:33 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:33 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=974459&date=04/07/2017%2012:07:33&custacc=
+2017-07-04 12:52:33 - 
+2017-07-04 12:52:33 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:33 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=313596&date=04/07/2017%2012:07:33&custacc=
+2017-07-04 12:52:33 - 
+2017-07-04 12:52:33 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:33 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=718615&date=04/07/2017%2012:07:33&custacc=
+2017-07-04 12:52:33 - 
+2017-07-04 12:52:33 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:33 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=165927&date=04/07/2017%2012:07:33&custacc=
+2017-07-04 12:52:33 - 
+2017-07-04 12:52:33 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:33 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=595752&date=04/07/2017%2012:07:33&custacc=
+2017-07-04 12:52:33 - 
+2017-07-04 12:52:33 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:33 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=262914&date=04/07/2017%2012:07:33&custacc=
+2017-07-04 12:52:33 - 
+2017-07-04 12:52:33 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:33 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=512775&date=04/07/2017%2012:07:33&custacc=
+2017-07-04 12:52:33 - 
+2017-07-04 12:52:33 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:33 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=437037&date=04/07/2017%2012:07:33&custacc=
+2017-07-04 12:52:33 - 
+2017-07-04 12:52:33 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:36 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=577968&date=04/07/2017%2012:07:36&custacc=
+2017-07-04 12:52:36 - 
+2017-07-04 12:52:36 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:36 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=350391&date=04/07/2017%2012:07:36&custacc=
+2017-07-04 12:52:36 - 
+2017-07-04 12:52:36 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:36 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=765417&date=04/07/2017%2012:07:36&custacc=
+2017-07-04 12:52:36 - 
+2017-07-04 12:52:36 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:36 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=897579&date=04/07/2017%2012:07:36&custacc=
+2017-07-04 12:52:36 - 
+2017-07-04 12:52:36 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:36 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=245724&date=04/07/2017%2012:07:36&custacc=
+2017-07-04 12:52:36 - 
+2017-07-04 12:52:36 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:36 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=780693&date=04/07/2017%2012:07:36&custacc=
+2017-07-04 12:52:36 - 
+2017-07-04 12:52:36 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:36 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=6730&date=04/07/2017%2012:07:36&custacc=
+2017-07-04 12:52:36 - 
+2017-07-04 12:52:36 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:36 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=407873&date=04/07/2017%2012:07:36&custacc=
+2017-07-04 12:52:36 - 
+2017-07-04 12:52:36 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:36 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=380594&date=04/07/2017%2012:07:36&custacc=
+2017-07-04 12:52:36 - 
+2017-07-04 12:52:36 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:36 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=812276&date=04/07/2017%2012:07:36&custacc=
+2017-07-04 12:52:36 - 
+2017-07-04 12:52:36 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:36 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=273781&date=04/07/2017%2012:07:36&custacc=
+2017-07-04 12:52:36 - 
+2017-07-04 12:52:36 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:36 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=12547&date=04/07/2017%2012:07:36&custacc=
+2017-07-04 12:52:36 - 
+2017-07-04 12:52:36 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:36 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=229391&date=04/07/2017%2012:07:36&custacc=
+2017-07-04 12:52:36 - 
+2017-07-04 12:52:36 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:36 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=132771&date=04/07/2017%2012:07:36&custacc=
+2017-07-04 12:52:36 - 
+2017-07-04 12:52:36 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:36 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=560216&date=04/07/2017%2012:07:36&custacc=
+2017-07-04 12:52:36 - 
+2017-07-04 12:52:36 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:36 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=939644&date=04/07/2017%2012:07:36&custacc=
+2017-07-04 12:52:36 - 
+2017-07-04 12:52:36 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:36 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=467387&date=04/07/2017%2012:07:36&custacc=
+2017-07-04 12:52:36 - 
+2017-07-04 12:52:36 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:36 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=405255&date=04/07/2017%2012:07:36&custacc=
+2017-07-04 12:52:36 - 
+2017-07-04 12:52:36 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:36 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=147349&date=04/07/2017%2012:07:36&custacc=
+2017-07-04 12:52:36 - 
+2017-07-04 12:52:36 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:36 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=326997&date=04/07/2017%2012:07:36&custacc=
+2017-07-04 12:52:36 - 
+2017-07-04 12:52:36 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-07-04 12:52:36 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=23561&date=04/07/2017%2012:07:36&custacc=
+2017-07-04 12:52:36 - 
+2017-07-04 12:52:36 - ?&ttype=&tempTxnId=&token=&txnStage=1

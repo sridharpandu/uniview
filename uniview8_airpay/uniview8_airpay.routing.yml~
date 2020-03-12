@@ -1,0 +1,32 @@
+uniview8_worldline:
+ path: '/worldline'
+ defaults:
+   _title: 'Uniview8 Bill Payment'
+   _form: '\Drupal\uniview8_worldline\Form\uniview8_worldline'
+ requirements:
+   _permission: 'access content'
+
+uniview8_worldline.Response:
+ path: '/worldline/Response'
+ defaults:
+   _title: ''
+   _form: '\Drupal\uniview8_worldline\Form\uniview8_worldlineResponse'
+ requirements:
+   _permission: 'access content'
+
+uniview8_worldline.process:
+ path: '/worldline/process'
+ defaults:
+   _title: ''
+   _form: '\Drupal\uniview8_worldline\Form\uniview8_worldline_process'
+ requirements:
+   _permission: 'access content'
+
+uniview8_worldline.config:
+ path: '/admin/config/uniview8_worldline/config'
+ defaults:
+    _form: '\Drupal\uniview8_worldline\Form\Uniview8WorldlineConfigForm'
+    _title: 'Configuration'
+ requirements:
+    _permission: 'administer site configuration'
+

@@ -1,0 +1,16 @@
+uniview8_atom:
+ path: '/atom'
+ defaults:
+   _title: ''
+   _form: '\Drupal\uniview8_atom\atomRequest'
+ requirements:
+   _permission: 'access content'
+
+
+atom.config:
+ path: '/admin/config/atom/config'
+ defaults:
+   _form: '\Drupal\uniview8_atom\Form\ConfigForm'
+   _title: 'Configuration'
+ requirements:
+   _permission: 'administer site configuration'

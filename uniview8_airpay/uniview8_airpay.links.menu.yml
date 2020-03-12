@@ -1,0 +1,5 @@
+airpay.admin_item_1:
+  title: 'Airpay Config'
+  parent: system.admin
+  description: 'To Configure Airpay PG.'
+  route_name: uniview8_airpay.config

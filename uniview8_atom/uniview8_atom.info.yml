@@ -1,0 +1,5 @@
+name: Uniview8 atom
+description: payu atom Integration
+package: Sastra
+type: module
+core: 8.x

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Airpay Payment Gateway</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+</head>
+<body>
+
+<form class="form-horizontal" name="make_trans" action="sendtoairpay.php" method="post" >
+    <div>
+        <label>Buyer Email<font color = "red"></font></label>
+        <div>
+            <input type="text" id="buyerEmail" name="buyerEmail" onkeypress = "changecolor(this.id,'buyerEmailspan')" maxlength = "50"> <span id = "buyerEmailspan" name = "buyerEmailspan" style = "display:none" class = "makeRed"></span>
+        </div>
+    </div><div>
+        <label>Buyer Phone<font color = "red"></font></label>
+        <div>
+            <input type="text" id="buyerPhone" name="buyerPhone" onkeypress = "changecolor(this.id,'buyerPhonespan')" maxlength = "15"> <span id = "buyerPhonespan" name = "buyerPhonespan" style = "display:none" class = "makeRed"></span>
+        </div>
+    </div><div>
+        <label>Buyer First Name<font color = "red">*</font></label>
+        <div>
+            <input type="text" id="buyerFirstName" name="buyerFirstName" onkeypress = "changecolor(this.id,'buyerFirstNamespan')" maxlength = "50">
+			 <span id = "buyerFirstNamespan" name = "buyerFirstNamespan" style = "display:none" class = "makeRed"></span>
+        </div>
+    </div><div>
+        <label>Buyer Last Name<font color = "red">*</font></label>
+        <div>
+            <input type="text" id="buyerLastName" name="buyerLastName" onkeypress = "changecolor(this.id,'buyerLastNamespan')" maxlength = "50">
+			 <span id = "buyerLastNamespan" name = "buyerLastNamespan" style = "display:none" class = "makeRed"></span>
+        </div>
+    </div><div>
+        <label>Buyer Address</label>
+        <div>
+            <input type="text" id="buyerAddress" name="buyerAddress" maxlength = "255" onkeypress = "changecolor(this.id,'buyerAddressspan')">
+			<span id = "buyerAddressspan" name = "buyerAddressspan" style = "display:none" class = "makeRed"></span>
+        </div>
+    </div><div>
+        <label>Buyer City</label>
+        <div>
+            <input type="text" id="buyerCity" name="buyerCity" maxlength = "50" onkeypress = "changecolor(this.id,'buyerCityspan')">
+			<span id = "buyerCityspan" name = "buyerCityspan" style = "display:none" class = "makeRed"></span>
+        </div>
+    </div><div>
+        <label>Buyer State</label>
+        <div>
+            <input type="text" id="buyerState" name="buyerState" maxlength = "50" onkeypress = "changecolor(this.id,'buyerStatespan')">
+			<span id = "buyerStatespan" name = "buyerStatespan" style = "display:none" class = "makeRed"></span>
+        </div>
+    </div><div>
+        <label>Buyer Country</label>
+        <div>
+            <input type="text" id="buyerCountry" name="buyerCountry" maxlength = "50" onkeypress = "changecolor(this.id,'buyerCountryspan')">
+			<span id = "buyerCountryspan" name = "buyerCountryspan" style = "display:none" class = "makeRed"></span>
+        </div>
+    </div><div>
+        <label>Buyer Pincode</label>
+        <div>
+            <input type="text" id="buyerPinCode" name="buyerPinCode" maxlength = "8" onkeypress = "changecolor(this.id,'buyerPinCodespan')" >
+			<span id = "buyerPinCodespan" name = "buyerPinCodespan" style = "display:none" class = "makeRed"></span>
+        </div>
+    </div><div>
+        <label>Order ID<font color = "red">*</font></label>
+        <div>
+            <input type="text" id="orderid" name="orderid" onkeypress = "changecolor(this.id,'orderidspan')">
+            <span id = "orderidspan" name = "orderidspan" style = "display:none" class = "makeRed"></span>
+        </div>
+    </div>
+	<div>
+        <label>Amount<font color = "red">*</font></label>
+        <div>
+            <input type="text" id="amount" name="amount" onkeypress = "changecolor(this.id,'amountspan')">
+            <span id = "amountspan" name = "amountspan" style = "display:none" class = "makeRed"></span>
+        </div>
+    </div>
+	<div>
+    <label>Custom Field 1</label>
+    <div>
+        <input type="text" id="customvar" name="customvar" onkeypress = "changecolor(this.id,'customspan')">
+        <span id = "customspan" name = "customspan" style = "display:none" class = "makeRed"></span>
+    </div>
+</div>
+    <div>
+        <label>Sub Type</label>
+        <div>
+            <input type="text" id="subtype" name="txnsubtype" maxlength="5">
+            <span id = "subtypespan" name = "subtypespan" style = "display:none" class = "makeRed"></span>
+        </div>
+    </div>
+	
+	
+    <div>
+		<br>
+        <div>
+            <button type="submit" class="btn">Pay Here</button>
+        </div>
+    </div>
+</form>
+<style>
+.makeRed
+{
+color: red;
+}
+</style>
+<script type="text/javascript">
+function validate(){
+			var rt_type;
+            document.getElementById('buyerEmailspan').innerHTML = '';
+            document.getElementById('buyerEmail').style.borderColor  = '';
+            document.getElementById('buyerPhonespan').innerHTML = '';
+            document.getElementById('buyerPhonespan').style.borderColor  = '';
+			if(document.getElementById('buyerEmail').value == "")
+			{
+				// document.getElementById('buyerEmail').style.borderColor  = 'red';
+				// document.getElementById('buyerEmailspan').style.display  = '';
+				// document.getElementById('buyerEmailspan').innerHTML = 'Please enter email address.';
+				// rt_type = false;
+			}
+			else
+			{
+				var reg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+				if (reg.test(document.getElementById('buyerEmail').value)){
+					rt_type;
+				}else
+				{
+					document.getElementById('buyerEmail').style.borderColor  = 'red';
+					document.getElementById('buyerEmailspan').style.display  = '';
+					document.getElementById('buyerEmailspan').innerHTML = 'Please enter valid email.';
+					rt_type = false;
+				}
+			}
+			if(document.getElementById('buyerPhone').value == "")
+			{
+				// document.getElementById('buyerPhone').style.borderColor  = 'red';
+				// document.getElementById('buyerPhonespan').style.display  = '';
+				// document.getElementById('buyerPhonespan').innerHTML = 'Please enter phone number.';
+				// rt_type = false;
+			}
+			else
+			{
+				var specials=/^[\d\s\.\-]+$/
+				if (!specials.test(document.getElementById('buyerPhone').value)){
+					document.getElementById('buyerPhone').style.borderColor  = 'red';
+					document.getElementById('buyerPhonespan').style.display  = '';
+					document.getElementById('buyerPhonespan').innerHTML = 'Please enter valid phone number.';
+					rt_type = false;
+				}
+				else
+				{
+					var phone = document.getElementById('buyerPhone').value;
+					if(phone.length<8)
+					{
+						document.getElementById('buyerPhone').style.borderColor  = 'red';
+						document.getElementById('buyerPhonespan').style.display  = '';
+						document.getElementById('buyerPhonespan').innerHTML = 'Phone number should be minimum 8 digit.';
+						rt_type = false;
+					}
+				}
+
+			}
+		    if(document.getElementById('buyerEmail').value == "" && document.getElementById('buyerPhone').value == ""){
+              		document.getElementById('buyerPhone').style.borderColor  = 'red';
+					document.getElementById('buyerPhonespan').style.display  = '';
+					document.getElementById('buyerPhonespan').innerHTML = 'Please enter either email or phone number.';
+					rt_type = false;
+			}
+			if(document.getElementById('buyerFirstName').value == "")
+			{
+				document.getElementById('buyerFirstName').style.borderColor  = 'red';
+				document.getElementById('buyerFirstNamespan').style.display  = '';
+				document.getElementById('buyerFirstNamespan').innerHTML = 'Please enter first name.';
+				rt_type = false;
+			}
+			else
+			{
+				var reg = /^[A-Za-z\d\s]+$/;
+				if (!reg.test(document.getElementById('buyerFirstName').value)){
+					document.getElementById('buyerFirstName').style.borderColor  = 'red';
+					document.getElementById('buyerFirstNamespan').style.display  = '';
+					document.getElementById('buyerFirstNamespan').innerHTML = 'Please enter valid first name.';
+					rt_type = false;
+				}
+				else
+				{
+					var fname = document.getElementById('buyerFirstName').value;
+					if(fname.length<1)
+					{
+						document.getElementById('buyerFirstName').style.borderColor  = 'red';
+						document.getElementById('buyerFirstNamespan').style.display  = '';
+						document.getElementById('buyerFirstNamespan').innerHTML = 'First name should be minimum 1 character.';
+						rt_type = false;
+					}
+				}
+
+			}
+			if(document.getElementById('buyerLastName').value == "")
+			{
+				document.getElementById('buyerLastName').style.borderColor  = 'red';
+				document.getElementById('buyerLastNamespan').style.display  = '';
+				document.getElementById('buyerLastNamespan').innerHTML = 'Please enter last name.';
+				rt_type = false;
+			}
+			else
+			{
+				var reg = /^[A-Za-z\d\s]+$/;
+				if (!reg.test(document.getElementById('buyerLastName').value)){
+					document.getElementById('buyerLastName').style.borderColor  = 'red';
+					document.getElementById('buyerLastNamespan').style.display  = '';
+					document.getElementById('buyerLastNamespan').innerHTML = 'Please enter valid last name.';
+					rt_type = false;
+				}
+				else
+				{
+					var fname = document.getElementById('buyerLastName').value;
+					if(fname.length<1)
+					{
+						document.getElementById('buyerLastName').style.borderColor  = 'red';
+						document.getElementById('buyerLastNamespan').style.display  = '';
+						document.getElementById('buyerLastNamespan').innerHTML = 'Last name should be minimum 1 character.';
+						rt_type = false;
+					}
+				}
+
+			}
+			if(document.getElementById('buyerAddress').value != "")
+			{
+				var reg = /^[A-Za-z. ,;#$\/()-_]*$/;
+				if (!reg.test(document.getElementById('buyerAddress').value)){
+					document.getElementById('buyerAddress').style.borderColor  = 'red';
+					document.getElementById('buyerAddressspan').style.display  = '';
+					document.getElementById('buyerAddressspan').innerHTML = 'Please enter valid address.';
+					rt_type = false;
+				}
+			}
+			if(document.getElementById('buyerPinCode').value != "")
+			{
+
+				var reg = /^[A-Za-z\d]+$/;
+				if (!reg.test(document.getElementById('buyerPinCode').value)){
+					document.getElementById('buyerPinCode').style.borderColor  = 'red';
+					document.getElementById('buyerPinCodespan').style.display  = '';
+					document.getElementById('buyerPinCodespan').innerHTML = 'Please enter valid pincode.';
+					rt_type = false;
+				}
+			}
+
+				var reg = /^[A-Za-z\d]+$/;
+				if (!reg.test(document.getElementById('orderid').value)){
+					document.getElementById('orderid').style.borderColor  = 'red';
+					document.getElementById('orderidspan').style.display  = '';
+					document.getElementById('orderidspan').innerHTML = 'Please enter valid order id.';
+					rt_type = false;
+				}
+
+			if(document.getElementById('amount').value == "")
+			{
+				document.getElementById('amount').style.borderColor  = 'red';
+				document.getElementById('amountspan').style.display  = '';
+				document.getElementById('amountspan').innerHTML = 'Please enter amount.';
+				rt_type = false;
+			}
+			else
+			{
+				val = document.getElementById('amount').value;
+				if (!val.match(/^(\d{1,6})(\.\d{2})$/)) {
+					document.getElementById('amount').style.borderColor  = 'red';
+					document.getElementById('amountspan').style.display  = '';
+					document.getElementById('amountspan').innerHTML = 'Please enter valid amount e.g. 99.50';
+					rt_type = false;
+				}
+			}
+			
+			if(document.getElementById('customvar').value != "")
+			{
+                var reg = /^[A-Za-z0-9 =]*$/;
+                if (!reg.test(document.getElementById('customvar').value)){
+                    document.getElementById('customvar').style.borderColor  = 'red';
+                    document.getElementById('customspan').style.display  = 'block';
+                    document.getElementById('customspan').innerHTML = 'Please enter valid Custom field1';
+                    rt_type = false;
+                }
+			}
+
+            if(document.getElementById('subtype').value != "")
+            {
+                var reg = /^[0-9]*$/;
+                if (!reg.test(document.getElementById('subtype').value)){
+                    document.getElementById('subtype').style.borderColor  = 'red';
+                    document.getElementById('subtypespan').style.display  = 'block';
+                    document.getElementById('subtypespan').innerHTML = 'Please enter numbers';
+                    rt_type = false;
+                }
+            }
+			
+			
+			return rt_type;
+		}
+		function changecolor(txtid, spanid)
+		{
+			document.getElementById(txtid).style.borderColor  = '';
+			document.getElementById(spanid).style.display  = 'none';
+		}
+		</script>
+</body>
+</html>

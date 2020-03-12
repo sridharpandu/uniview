@@ -1,0 +1,251 @@
+<?php
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+  $links = \Drupal::entityTypeManager()->getStorage('menu_link_content')
+  ->loadByProperties(['title' => 'Pay Subscription']);
+
+if($link = reset($links)) {
+
+}
+
+else{
+ $menu_link = MenuLinkContent::create([
+    'title' => 'Pay Subscription',
+    'link' => ['uri' => 'internal:/cash'],
+    'menu_name' => 'main',
+    'expanded' => FALSE,
+  ]);
+  $menu_link->save();
+}
+
+function cash_schema(){
+//table 1: subscription_due	
+$schema['subscription_due'] = array(
+	'fields' => array(
+	'memberid' => array(
+	 'description' => 'the unique member id of the members',
+       	 'type' => 'varchar',
+	 'length' => 30,
+	 'not null' => TRUE),
+      'bill_date' => array(
+        'description' => 'the date of the generation of bill amount',
+        'type' => 'varchar',
+        'length' => 16,
+        'not null' => TRUE,
+      ),
+      'description' => array(
+        'description' => 'the description of the subscription done by the member',
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE,
+      ),
+      'amount' => array(
+        'description' => 'amount to be paid',
+        'type' => 'float',
+        'not null' => TRUE,
+      ),
+      'due_date' => array(
+        'description' => 'date to which payment should be done',
+        'type' => 'varchar',
+        'length' => 16,
+        'not null' => TRUE,
+      ),
+      'bank_reference' => array(
+        'description' => 'the bank reference number after payment of amount',
+        'type' => 'varchar',
+        'length' => 20,
+        'not null' => FALSE,
+      ),
+      'receipt_number' => array(
+       'description' => 'the receipt number provided by the bank',
+       'type' => 'varchar',
+       'length' => 20,
+       'not null' => FALSE,
+      ),
+),
+);
+
+//table 2: facility_payments
+
+$schema['facility_payments'] = array(
+	 'description' => 'contains information of the facilities monthly or annual given to subscribed member',
+	  'fields' => array(
+		'member_id' => array(
+        'description' => 'unique member id of the member',
+        'type' => 'varchar',
+        'length' => 30,
+        'not null' => TRUE,
+      ),
+      'paid_on' => array(
+        'description' => 'date in which amount is paid',
+        'type' => 'varchar',
+        'length' => 20,
+        'not null' => TRUE,
+      ),
+      'description' => array(
+        'description' => 'the description of the subscription type',
+        'type' => 'text',
+        'length' => 200,
+        'not null' => TRUE,
+      ),
+      'amount' => array(
+        'description' => 'amount of the subscription taken',
+        'type' => 'float',
+        'not null' => TRUE,
+      ),
+      'bank_reference' => array(
+        'description' => 'the bank reference number',
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => FALSE,
+      ),
+      'receipt_number' => array(
+        'description' => 'the receipt number provided by the bank',
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => FALSE,
+      ),
+    ),
+  );
+//table subscription_due2
+
+$schema['cnc_subscription_due2'] = array(
+	'description' => 'holds the information of outstanding amount to be paid by member',
+	'fields' => array(
+      'sno' => array(
+        'description' => 'serial number',
+        'type' => 'varchar',
+        'length' => '60',
+        'not null' => FALSE,
+      ),
+      'code' => array(
+        'description' => 'the unique Member Code of Members',
+        'type' => 'varchar',
+        'length' => '16',
+        'not null' => FALSE,
+      ),
+      'name' => array(
+        'description' => 'the name of the member',
+        'type' => 'varchar',
+        'length' => '60',
+        'not null' => FALSE,
+      ),
+      'amount' => array(
+        'description' => 'amount to be paid',
+        'type' => 'float',
+        'not null' => FALSE,
+      ),
+      'status' => array(
+        'description' => 'current status of Member',
+        'type' => 'varchar',
+        'length' => '30',
+        'not null' => FALSE,
+      ),
+    ),
+  );
+
+
+  //table uv_merchant_details
+  $schema['cnc_uv_merchant_details'] = array(
+    'fields' => array(
+      'id' => array('type' => 'int', 'size' => 'normal', 'length' => '255', 'not null' => FALSE, 'description' => 'Id'), 
+      'vpc_url' => array('type' => 'text', 'size' => 'normal', 'not null' => TRUE, 'description' => 'Virtual Payment Client URL'),
+      'vpc_version' => array('type' => 'text',  'size' => 'normal', 'not null' => FALSE, 'description' => 'VPC Version'),
+      'vpc_command' => array('type' => 'text', 'size' => 'normal', 'length' => '255', 'not null' => FALSE, 'description' => 'VPC Command'),
+      'vpc_access_code' => array('type' => 'text', 'size' => 'normal', 'length' => '255', 'not null' => FALSE, 'description' => 'VPC Access Code'),  
+      'vpc_merchant_id' => array('type' => 'text', 'size' => 'normal', 'length' => '255', 'not null' => FALSE, 'description' => 'VPC Merchant ID'),
+    ),  
+  );
+  $schema['cnc_uv_payu_merchant_details'] = array(
+    'fields' => array(
+      'id' => array('type' => 'int', 'size' => 'normal', 'length' => '255', 'not null' => FALSE, 'description' => 'ID'), 
+      'payu_RequestUrl' => array('type' => 'text', 'size' => 'normal', 'length' => '50', 'not null' => FALSE, 'description' => 'URL to PayU Server'),
+      'payu_MerchantKey' => array('type' => 'text', 'size' => 'normal', 'length' => '50', 'not null' => FALSE, 'description' => 'Merchant Key provided by PayU'),
+      'payu_Salt' => array('type' => 'text', 'size' => 'normal', 'length' => '25', 'not null' => FALSE, 'description' => 'Merchant SALT provided by PayU'),
+      'payu_SuccessUrl' => array('type' => 'text', 'size' => 'normal', 'length' => '50', 'not null' => FALSE, 'description' => 'URL to redirect to after a successful transaction'),
+      'payu_FailureUrl' => array('type' => 'text', 'size' => 'normal', 'length' => '50', 'not null' => FALSE, 'description' => 'URL to redirect to after a failed transaction'),
+      'payu_CancelUrl' => array('type' => 'text', 'size' => 'normal', 'length' => '50', 'not null' => FALSE, 'description' => 'URL to redirect to after a transaction is cancelled'),
+      'payu_CodUrl' => array('type' => 'text', 'size' => 'normal', 'length' => '50', 'not null' => FALSE, 'description' => 'URL to redirect to after a COD transaction'),
+      'payu_ToutUrl' => array('type' => 'text', 'size' => 'normal', 'length' => '50', 'not null' => FALSE, 'description' => 'URL to redirect to after a transaction is timed out'),
+      'payu_DefaultTab' => array('type' => 'text', 'size' => 'normal', 'length' => '5', 'not null' => FALSE, 'description' => 'The default tab to be opened in PayU. CC-CreditCard, DB-DebitCard, NB-NetBanking'),
+      'payu_DropCategory' => array('type' => 'text', 'size' => 'normal', 'length' => '15', 'not null' => FALSE, 'description' => 'Include the categories that is NOT needed. CC-CreditCard, DB-DebitCard, NB-NetBanking'),
+      'payu_ServiceProvider' => array('type' => 'text', 'size' => 'normal', 'length' => '15', 'not null' => FALSE, 'description' => 'Service Provider'),
+    ),  
+  );
+
+  //table uv_payu_request
+  $schema['cnc_uv_payu_request'] = array(
+    'fields' => array(
+      'payu_key' => array('type' => 'text', 'size' => 'normal', 'length' => '35', 'not null' => FALSE, 'description' => 'Merchant ID provided by PayU'),
+      'payu_txnid' => array('type' => 'text', 'size' => 'normal', 'length' => '35', 'not null' => FALSE, 'description' => 'Transaction ID sent by merchant'),
+      'payu_amount' => array('type' => 'int', 'size' => 'normal', 'not null' => FALSE, 'description' => 'Original amount sent by payu_merchant'),
+      'payu_firstname' => array('type' => 'text', 'size' => 'normal', 'length' => '15', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_email' => array('type' => 'text', 'size' => 'normal', 'length' => '50', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_phone' => array('type' => 'text', 'size' => 'normal', 'length' => '20', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_product_info' => array('type' => 'text', 'size' => 'normal', 'length' => '145', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_lastname' => array('type' => 'text', 'size' => 'normal', 'length' => '20', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_address1' => array('type' => 'text', 'size' => 'normal', 'length' => '100', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_address2' => array('type' => 'text', 'size' => 'normal', 'length' => '100', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_city' => array('type' => 'text', 'size' => 'normal', 'length' => '20', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_state' => array('type' => 'text', 'size' => 'normal', 'length' => '20', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_country' => array('type' => 'text', 'size' => 'normal', 'length' => '20', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_zip_code' => array('type' => 'text', 'size' => 'normal', 'length' => '20', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_udf1' => array('type' => 'text', 'size' => 'normal', 'length' => '100', 'not null' => FALSE, 'description' => 'member - preface'),
+      'payu_udf2' => array('type' => 'text', 'size' => 'normal', 'length' => '100', 'not null' => FALSE, 'description' => 'email id'),
+      'payu_udf3' => array('type' => 'text', 'size' => 'normal', 'length' => '100', 'not null' => FALSE, 'description' => 'Vendor - Sastra Technologies'),
+      'payu_udf4' => array('type' => 'text', 'size' => 'normal', 'length' => '100', 'not null' => FALSE, 'description' => 'Module - Uniview'),
+      'payu_udf5' => array('type' => 'text', 'size' => 'normal', 'length' => '100', 'not null' => FALSE, 'description' => 'billnumber.billdata.membernumber.time'),
+      'payu_pg' => array('type' => 'text', 'size' => 'normal', 'length' => '20', 'not null' => FALSE, 'description' => 'Payment Gateway type used in transaction'),
+      'payu_drop_category' => array('type' => 'text', 'size' => 'normal', 'length' => '15', 'not null' => FALSE, 'description' => 'CC-CreditCard, DB-DebitCard, NB-NetBanking'),
+      'payu_custom_note' => array('type' => 'text', 'size' => 'normal', 'length' => '100', 'not null' => FALSE, 'description' => 'vendor message'),
+      'payu_note_category' => array('type' => 'text', 'size' => 'normal', 'length' => '15', 'not null' => FALSE, 'description' => 'CC-CreditCard, DB-DebitCard, NB-NetBanking'),
+      'payu_hash' => array('type' => 'text', 'size' => 'normal', 'length' => '100', 'not null' => FALSE, 'description' => 'Hash must be verified before confirmation of transaction'),
+    ),
+  );
+
+  //table uv_payu_response
+  $schema['cnc_uv_payu_response'] = array(
+    'fields' => array(
+      'payu_mihpayid' => array('type' => 'text', 'size' => 'normal', 'length' => '15', 'not null' => TRUE, 'description' => 'Unique ID from PayU.in'),
+      'payu_mode' => array('type' => 'text', 'size' => 'normal', 'length' => '5', 'not null' => FALSE, 'description' => 'CC-CreditCard, DB-DebitCard, NB-NetBanking'),
+      'payu_status' => array('type' => 'text',  'size' => 'normal', 'length' => '7', 'not null' => FALSE, 'description' => 'SUCCESS, PENDING, FAILURE'),
+      'payu_key' => array('type' => 'text', 'size' => 'normal', 'length' => '15', 'not null' => FALSE, 'description' => 'Merchant ID provided by PayU'),
+      'payu_txnid' => array('type' => 'text', 'size' => 'normal', 'length' => '25', 'not null' => FALSE, 'description' => 'Transaction ID sent by merchant'),
+      'payu_amount' => array('type' => 'int', 'size' => 'normal', 'not null' => FALSE, 'description' => 'Original amount sent by payu_merchant'),
+      'payu_discount' => array('type' => 'int', 'size' => 'normal', 'not null' => FALSE, 'description' => 'This is the discount given to user - based on the promotion set by merchants'),
+      'payu_offer' => array('type' => 'text', 'size' => 'normal', 'length' => '145', 'not null' => FALSE, 'description' => 'Description of offer for what PayU has given the offer to user - based on the promotion set by merchants'),
+      'payu_product_info' => array('type' => 'text', 'size' => 'normal', 'length' => '145', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_firstname' => array('type' => 'text', 'size' => 'normal', 'length' => '15', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_lastname' => array('type' => 'text', 'size' => 'normal', 'length' => '20', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_address1' => array('type' => 'text', 'size' => 'normal', 'length' => '100', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_address2' => array('type' => 'text', 'size' => 'normal', 'length' => '100', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_city' => array('type' => 'text', 'size' => 'normal', 'length' => '20', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_state' => array('type' => 'text', 'size' => 'normal', 'length' => '20', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_country' => array('type' => 'text', 'size' => 'normal', 'length' => '20', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_zip_code' => array('type' => 'text', 'size' => 'normal', 'length' => '20', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_email' => array('type' => 'text', 'size' => 'normal', 'length' => '50', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_phone' => array('type' => 'text', 'size' => 'normal', 'length' => '20', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_udf1' => array('type' => 'text', 'size' => 'normal', 'length' => '100', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_udf2' => array('type' => 'text', 'size' => 'normal', 'length' => '100', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_udf3' => array('type' => 'text', 'size' => 'normal', 'length' => '100', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_udf4' => array('type' => 'text', 'size' => 'normal', 'length' => '100', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_udf5' => array('type' => 'text', 'size' => 'normal', 'length' => '100', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_hash' => array('type' => 'text', 'size' => 'normal', 'length' => '100', 'not null' => FALSE, 'description' => 'Hash must be verified before confirmation of transaction'),
+      'payu_error' => array('type' => 'text', 'size' => 'normal', 'length' => '5', 'not null' => FALSE, 'description' => 'If transaction failed, then reason of failure'),
+      'payu_pg_type' => array('type' => 'text', 'size' => 'normal', 'length' => '20', 'not null' => FALSE, 'description' => 'Payment Gateway type used in transaction'),
+      'payu_bank_ref_num' => array('type' => 'text', 'size' => 'normal', 'length' => '10', 'not null' => FALSE, 'description' => 'Reference number for the payment gateway - received in PG_TYPE'),
+      'payu_shipping_firstname' => array('type' => 'text', 'size' => 'normal', 'length' => '20', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_shipping_lastname' => array('type' => 'text', 'size' => 'normal', 'length' => '20', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_shipping_address1' => array('type' => 'text', 'size' => 'normal', 'length' => '100', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_shipping_address2' => array('type' => 'text', 'size' => 'normal', 'length' => '100', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_shipping_city' => array('type' => 'text', 'size' => 'normal', 'length' => '20', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_shipping_state' => array('type' => 'text', 'size' => 'normal', 'length' => '20', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_shipping_country' => array('type' => 'text', 'size' => 'normal', 'length' => '20', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_shipping_zipcode' => array('type' => 'text', 'size' => 'normal', 'length' => '15', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_shipping_phone' => array('type' => 'text', 'size' => 'normal', 'length' => '15', 'not null' => FALSE, 'description' => 'Self Explanatory'),
+      'payu_shipping_phoneverified' => array('type' => 'text', 'size' => 'normal', 'length' => '3', 'not null' => FALSE, 'description' => 'Yes OR No'),
+      'payu_unmappedstatus' => array('type' => 'text', 'size' => 'normal', 'length' => '100', 'not null' => FALSE, 'description' => 'Status of transaction in PayU s system. eg: initiated / in progress / dropped / bounced / captured / auth / failed / user cancelled / pending'),
+    ),
+  );
+
+return $schema;
+}

@@ -1,0 +1,39 @@
+uniview8_airpay:
+ path: '/airpay'
+ defaults:
+   _title: 'Uniview8 Bill Payment'
+   _form: '\Drupal\uniview8_airpay\Form\uniview8_airpay'
+ requirements:
+   _permission: 'access content'
+
+uniview8_airpay.success:
+ path: '/airpay/success'
+ defaults:
+   _title: ''
+   _form: '\Drupal\uniview8_airpay\Form\uniview8_airpayResponse'
+ requirements:
+   _permission: 'access content'
+
+uniview8_airpay.process:
+ path: '/airpay/process'
+ defaults:
+   _title: ''
+   _form: '\Drupal\uniview8_airpay\Form\uniview8_airpay_process'
+ requirements:
+   _permission: 'access content'
+
+uniview8_airpay.config:
+ path: '/admin/config/uniview8_airpay/config'
+ defaults:
+    _form: '\Drupal\uniview8_airpay\Form\Uniview8airpayConfigForm'
+    _title: 'Configuration'
+ requirements:
+    _permission: 'administer site configuration'
+
+uniview8_airpay.cancel:
+ path: '/airpay/cancel'
+ defaults:
+   _title: 'Payment Canceled'
+   _form: '\Drupal\uniview8_airpay\Form\uniview8_airpayResponse'
+ requirements:
+   _permission: 'access content'

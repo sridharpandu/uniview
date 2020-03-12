@@ -1,0 +1,16 @@
+uniview8_paynimo:
+ path: '/paynimo'
+ defaults:
+   _title: ''
+   _form: '\Drupal\uniview8_paynimo\paynimoRequest'
+ requirements:
+   _permission: 'access content'
+
+
+paynimo.config:
+ path: '/admin/config/paynimo/config'
+ defaults:
+   _form: '\Drupal\uniview8_paynimo\Form\ConfigForm'
+   _title: 'Configuration'
+ requirements:
+   _permission: 'administer site configuration'

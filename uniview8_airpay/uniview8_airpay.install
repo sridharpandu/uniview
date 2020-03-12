@@ -1,0 +1,99 @@
+<?php
+
+function uniview8_airpay_schema() {
+ $schema['uniview8_airpay_response'] = array(
+   'fields' => array(
+    
+    'Autoid' => array(
+                    'type' => 'serial',
+                    'not null' => TRUE),
+
+    'airpay_firstname' => array(
+                   'type' => 'text',
+                   'size' => 'normal',
+                   'length' => '15',
+                   'not null' => FALSE,
+                   'description' => 'Self Explanatory'),
+
+    'airpay_memberid' => array('type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE,
+                 'description' => 'Self Explanatory'),
+   
+    'airpay_email' => array(
+                   'type' => 'text',
+                   'size' => 'normal',
+                   'length' => '50',
+                   'not null' => FALSE,
+                   'description' => 'Self Explanatory'),
+  
+    'airpay_phone' => array(
+                  'type' => 'text',
+                  'size' => 'normal',
+                  'length' => '20',
+                  'not null' => FALSE,
+                   'description' => 'Self Explanatory'),
+    
+   'airpay_billdate' => array(
+                 'type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE, 
+                 'description' => 'Self Explanatory'),
+  
+   'airpay_amount' => array(
+                  'type' => 'int',
+                  'size' => 'normal',
+                  'not null' => FALSE,
+                  'description' => 'Amount in paisa Format'),
+           
+    'airpay_orderid' => array(
+                 'type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE, 
+		             'description' => 'Self Explanatory'),
+	
+    'airpay_billnumber' => array(
+                 'type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE, 
+                 'description' => 'Self Explanatory'),
+        
+    'airpay_apitrnno' => array(
+                 'type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE, 
+                 'description' => 'API TRANSACTION NUMBER SENT FROM AIRPAY'),
+
+    'airpay_txnid' => array(
+                 'type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE, 
+                'description' => 'Transaction Reference Number'),
+
+    'airpay_status' => array(
+                'type' => 'text',
+                'size' => 'normal',
+                'length' => '20', 'not null' => FALSE, 
+                'description' => 'Status Code of transaction'),
+  
+    'airpay_statusDesc' => array(
+                'type' => 'text',
+                'size' => 'normal',
+                'length' => '20', 'not null' => FALSE, 
+                'description' => 'Detailed Description of Transaction status'),
+
+	'paidtime' => array(
+          'mysql_type' => 'timestamp',
+          'not null' => TRUE
+       )
+     ),
+  'primary key' => array('Autoid'),
+ );
+   return $schema;
+}

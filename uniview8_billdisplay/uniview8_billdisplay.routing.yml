@@ -25,6 +25,24 @@ uniview8_display:
    _permission: 'access content'
    _user_is_logged_in: 'TRUE'
 
+uniview8_vouchers:
+ path: '/vouchers'
+ defaults:
+   _title: ''
+   _form: '\Drupal\uniview8_billdisplay\vouchers'
+ requirements:
+   _permission: 'access content'
+   _user_is_logged_in: 'TRUE'
+
+uniview8_voucherdetails:
+ path: '/voucherdetails'
+ defaults:
+   _title: ''
+   _form: '\Drupal\uniview8_billdisplay\voucherdetails'
+ requirements:
+   _permission: 'access content'
+   _user_is_logged_in: 'TRUE'
+
 billdisplay.config:
  path: '/admin/config/billdisplay/config'
  defaults:

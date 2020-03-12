@@ -1,0 +1,5 @@
+uniview8_payu.admin_item_1:
+  title: 'Payu Configuration'
+  parent: system.admin
+  description: 'Payu Configuration'
+  route_name: payu.config

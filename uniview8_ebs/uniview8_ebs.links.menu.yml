@@ -1,0 +1,5 @@
+uniview8_ebs.admin_item_1:
+  title: 'EBS Configuration'
+  parent: system.admin
+  description: 'EBS Configuration'
+  route_name: ebs.config

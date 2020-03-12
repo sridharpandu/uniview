@@ -1,0 +1,5 @@
+name: Uniview8 payu
+description: payu money Integration
+package: Sastra
+type: module
+core: 8.x

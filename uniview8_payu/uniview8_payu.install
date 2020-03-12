@@ -1,0 +1,191 @@
+<?php
+
+function uniview8_payu_schema() {
+ $schema['uniview8_payu_response'] = array(
+    'fields' => array(
+	'payu_mihpayid' => array(
+                  'type' => 'text',
+                  'size' => 'normal',
+                  'length' => '35',
+                  'not null' => FALSE,
+                  'description' => 'Unique ID from PayU.in'),
+	'payu_mode' => array(
+                  'type' => 'text',
+                  'size' => 'normal',
+                  'length' => '35',
+                  'not null' => FALSE,
+                  'description' => 'CC-CreditCard, DB-DebitCard, NB-NetBanking'),
+      'payu_key' => array(
+                  'type' => 'text',
+                  'size' => 'normal',
+                  'length' => '35',
+                  'not null' => FALSE,
+                  'description' => 'Merchant ID provided by PayU'),
+      'payu_txnid' => array(
+                   'type' => 'text',
+                   'size' => 'normal',
+                   'length' => '35',
+                   'not null' => FALSE,
+                   'description' => 'Transaction ID sent by merchant'),
+      'payu_amount' => array(
+                   'type' => 'int',
+                   'size' => 'normal',
+                   'not null' => FALSE,
+                   'description' => 'Original amount sent by payu_merchant'),
+      'payu_discount' => array(
+                   'type' => 'int',
+                   'size' => 'normal',
+                   'not null' => FALSE,
+                   'description' => 'This is the discount given to user - based on the promotion set by merchants'),
+	'payu_offer' => array(
+                   'type' => 'int',
+                   'size' => 'normal',
+                   'not null' => FALSE,
+                   'description' => 'This is the discount given to user - based on the promotion set by merchants'),
+	'payu_product_info' => array(
+                  'type' => 'text',
+                  'size' => 'normal',
+                  'length' => '145',
+                  'not null' => FALSE,
+                  'description' => 'Self Explanatory'),
+     
+	 'payu_firstname' => array(
+                   'type' => 'text',
+                   'size' => 'normal',
+                   'length' => '15',
+                   'not null' => FALSE,
+                   'description' => 'Self Explanatory'),
+	'payu_lastname' => array(
+                   'type' => 'text',
+                   'size' => 'normal',
+                   'length' => '15',
+                   'not null' => FALSE,
+                   'description' => 'Self Explanatory'),
+	'payu_address' => array(
+                   'type' => 'text',
+                   'size' => 'normal',
+                   'length' => '15',
+                   'not null' => FALSE,
+                   'description' => 'Self Explanatory'),
+      'payu_email' => array(
+                   'type' => 'text',
+                   'size' => 'normal',
+                   'length' => '50',
+                   'not null' => FALSE,
+                   'description' => 'Self Explanatory'),
+      'payu_phone' => array(
+                  'type' => 'text',
+                  'size' => 'normal',
+                  'length' => '20',
+                  'not null' => FALSE, 'description' => 'Self Explanatory'),
+	'payu_city' => array('type' => 'text',
+                 'size' => 'normal',
+                 'length' => '20', 
+                 'not null' => FALSE,
+                 'description' => 'Self Explanatory'),
+      'payu_state' => array(
+                 'type' => 'text',
+                 'size' => 'normal',
+                 'length' => '20',
+                 'not null' => FALSE,
+                 'description' => 'Self Explanatory'),
+      'payu_country' => array(
+                 'type' => 'text',
+                 'size' => 'normal',
+                 'length' => '20',
+                 'not null' => FALSE,
+                 'description' => 'Self Explanatory'),
+      'payu_zip_code' => array(
+                'type' => 'text',
+                'size' => 'normal',
+                'length' => '20',
+                'not null' => FALSE,
+                'description' => 'Self Explanatory'),
+	 'payu_udf1' => array('type' => 'text',
+	 	'size' => 'normal',
+		 'length' => '100',
+		 'not null' => FALSE,
+		 'description' => 'Self Explanatory'),
+	'payu_udf2' => array('type' => 'text',
+	 	'size' => 'normal',
+		 'length' => '100',
+		 'not null' => FALSE,
+		 'description' => 'Self Explanatory'),
+	'payu_udf3' => array('type' => 'text',
+	 	'size' => 'normal',
+		 'length' => '100',
+		 'not null' => FALSE,
+		 'description' => 'Self Explanatory'),
+	'payu_udf4' => array('type' => 'text',
+	 	'size' => 'normal',
+		 'length' => '100',
+		 'not null' => FALSE,
+		 'description' => 'Self Explanatory'),
+	'payu_udf5' => array('type' => 'text',
+	 	'size' => 'normal',
+		 'length' => '100',
+		 'not null' => FALSE,
+		 'description' => 'Self Explanatory'),
+	'payu_hash' => array('type' => 'text',
+	 	'size' => 'normal',
+		 'length' => '100',
+		 'not null' => FALSE,
+		 'description' => 'Hash must be verified before confirmation of transaction'),
+
+      'payu_serviceprovider' => array(
+                 'type' => 'text',
+                 'size' => 'normal',
+                 'length' => '40',
+                 'not null' => FALSE,
+                 'description' => 'Service Provider'),
+      'payu_billdate' => array(
+                 'type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE, 
+		'description' => 'Self Explanatory'),
+	'payu_billnumber' => array(
+                 'type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE, 
+		'description' => 'Self Explanatory'),
+      'payu_memberid' => array('type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE,
+                 'description' => 'Self Explanatory'),
+      'payu_transactiondesc' => array(
+                 'type' => 'text',
+                 'size' => 'normal',
+                 'length' => '100',
+                 'not null' => FALSE,
+                 'description' => 'transaction Description'),
+       'payu_pg' => array(
+                'type' => 'text',
+                'size' => 'normal',
+                'length' => '20', 'not null' => FALSE, 'description' => 'Payment Gateway type used in transaction'),
+      	'payu_error' => array(
+                'type' => 'text',
+                'size' => 'normal',
+                'length' => '20', 'not null' => FALSE, 'description' => 'If transaction failed, then reason of failure'),
+      'payu_bank_ref_num' => array(
+                'type' => 'text',
+                'size' => 'normal',
+                'length' => '20', 'not null' => FALSE, 'description' => 'Reference number for the payment gateway - received in PG_TYPE'),
+      'payu_status' => array(
+                'type' => 'text',
+                'size' => 'normal',
+                'length' => '20', 'not null' => FALSE, 'description' => 'payment is successful or not'),
+      'payu_status' => array(
+                'type' => 'text',
+                'size' => 'normal',
+                'length' => '20', 'not null' => FALSE, 'description' => 'payment is successful or not'),
+      'paidtime' => array(
+          'mysql_type' => 'timestamp',
+          'not null' => TRUE)
+    ),
+  );
+
+   return $schema;
+}

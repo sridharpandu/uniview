@@ -9,7 +9,7 @@
 /* ------ container ------ */
 div.css_bar_graph
 	{
-	width: 500px;
+	width: 800px;
 	height: 320px;
 	padding: 40px 20px 10px 70px;
 	/* --- font --- */
@@ -78,7 +78,7 @@ div.css_bar_graph ul.y_axis li
 div.css_bar_graph ul.x_axis
 	{
 	width: 100%;
-	height: 50px;
+	height: 20px;
 	position: absolute;
 	bottom: 0px;
 	left: 95px;
@@ -89,7 +89,7 @@ div.css_bar_graph ul.x_axis
 div.css_bar_graph ul.x_axis li
 	{
 	display: inline;
-	margin-left: 10px;
+	margin-left: -40px;
 	width: 100px;
 	float: left;
 	}
@@ -131,7 +131,7 @@ div.css_bar_graph div.label span
 	font-size: 30px;
 	text-align: center;
 	letter-spacing: 1px;
-	margin-top: 5px;
+	margin-top: 10px;
 	background-color: #FFF;
 	width: 200px;
 	margin-left: 350px;
@@ -139,6 +139,109 @@ div.css_bar_graph div.label span
 
         border-radius: 5px;
 	}
+
+.thismonth
+	{
+	font-size: 15px;
+	text-align: center;
+	letter-spacing: 1px;
+	margin-top: 15px;
+
+	width: 200px;
+	margin-left: 50px;
+	border: 0px solid #d5d5d5;
+	display:inline-block;
+        border-radius: 5px;
+	}
+
+.thismonth1
+	{
+	font-size: 20px;
+	text-align: center;
+	letter-spacing: 1px;
+	margin-top: 10px;
+
+	width: 200px;
+        height: 83px;
+	margin-left: 50px;
+	border: 1px solid #d5d5d5;
+        display:inline-block;
+        border-radius: 5px;     
+	}
+
+.previousmonth
+	{
+	font-size: 15px;
+	text-align: center;
+	letter-spacing: 1px;
+	margin-top: 15px;
+
+	width: 200px;
+	margin-left: 400px;
+	border: 0px solid #d5d5d5;
+	display:inline-block;  
+        border-radius: 5px;
+	}
+.previousmonth1
+	{
+	font-size: 20px;
+	text-align: center;
+	letter-spacing: 1px;
+	margin-top: 10px;
+
+	width: 200px;
+        height: 83px;
+	margin-left: 400px;
+	border: 1px solid #d5d5d5;
+        display:inline-block;
+        border-radius: 5px;      
+	}
+.hea
+	{
+	margin-left: 370px;
+        text-align:center;
+        display:inline-block;     
+        border: 0px solid #d5d5d5;
+	}
+.ritd  {
+       text-align:right;
+
+}
+
+
+
+
+.table1
+{
+  width:70%;
+  height:300px;
+  padding:2px;
+  border-collapse: collapse;
+  border:2px solid black;
+}
+
+.td1
+{
+ width:50px;
+ padding : 1px;
+ margin-left: 100px;
+ height:20px;
+}
+.th1
+{
+margin-top: 2px
+}
+
+.tr1
+{
+width: 20px
+
+}
+
+
+
+
+
 
 /* ==================== GRAPH  ==================== */
 /* ------ base ------ */
@@ -199,7 +302,7 @@ div.css_bar_graph div.graph li.bar
 	width: 35px;
 	float: left;
 	position: absolute;
-	bottom: 75px;
+	bottom: 43px;
 	text-align: center;
 	/* --- css3 --- */
 	/* --- transitions --- */
@@ -252,7 +355,7 @@ div.css_bar_graph div.graph li.bar div.bottom
 div.css_bar_graph div.graph li.bar span
 	{
 	visibility: hidden;	/* show label on mouse over */
-	position: relative;
+	position: absolute;
 	top: -45px;
 	padding: 3px 5px 3px 5px;
 	z-index: 100;
@@ -287,25 +390,25 @@ div.css_bar_graph div.graph li.bar span
 /* ------ bars positions ------ */
 div.css_bar_graph div.graph li.nr_1
 	{
-	left: 140px;
+	left: 90px;
 	height: <?php echo $_GET['height1']?$_GET['height1']:0 ."px" ?>;
 	}
 	
 div.css_bar_graph div.graph li.nr_2
 	{
-	left: 250px;
+	left: 150px;
 	height: <?php echo $_GET['height2']?$_GET['height2']:0 ."px" ?>;
 	}
 	
 div.css_bar_graph div.graph li.nr_3
 	{
-	left: 360px;
+	left: 210px;
 	height: <?php echo $_GET['height3']?$_GET['height3']:0 ."px" ?>;
 	}
 	
 div.css_bar_graph div.graph li.nr_4
 	{
-	left: 470px;
+	left: 270px;
 	height: <?php echo $_GET['height4']?$_GET['height4']:0 ."px" ?>;
 	}
 	
@@ -317,43 +420,43 @@ div.css_bar_graph div.graph li.nr_5
 	
 div.css_bar_graph div.graph li.nr_6
 	{
-	left: 385px;
+	left: 390px;
 	height: <?php echo $_GET['height6']?$_GET['height6']:0 ."px" ?>;
 	}
 	
 div.css_bar_graph div.graph li.nr_7
 	{
-	left: 440px;
+	left: 450px;
 	height: <?php echo $_GET['height7']?$_GET['height7']:0 ."px" ?>;
 	}
 	
 div.css_bar_graph div.graph li.nr_8
 	{
-	left: 495px;
+	left: 510px;
 	height: <?php echo $_GET['height8']?$_GET['height8']:0 ."px" ?>;
 	}
 	
 div.css_bar_graph div.graph li.nr_9
 	{
-	left: 550px;
+	left: 570px;
 	height: <?php echo $_GET['height9']?$_GET['height9']:0 ."px" ?>;
 	}
 	
 div.css_bar_graph div.graph li.nr_10
 	{
-	left: 605px;
+	left: 630px;
 	height: <?php echo $_GET['height10']?$_GET['height10']:0 ."px" ?>;
 	}
 	
 div.css_bar_graph div.graph li.nr_11
 	{
-	left: 660px;
+	left: 690px;
 	height: <?php echo $_GET['height11']?$_GET['height11']:0 ."px" ?>;
 	}
 	
 div.css_bar_graph div.graph li.nr_12
 	{
-	left: 715px;
+	left: 750px;
 	height: <?php echo $_GET['height12']?$_GET['height12']:0 ."px" ?>;
 	}
 
@@ -460,7 +563,6 @@ div.css_bar_graph div.graph li.red div.bottom
 /* ==================== HOVERS  ==================== */
 div.css_bar_graph div.graph li.blue:hover
 	{
-	cursor: pointer;
 	background: #208faf;
 	}
 	

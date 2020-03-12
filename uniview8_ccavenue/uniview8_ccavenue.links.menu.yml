@@ -1,0 +1,5 @@
+uniview8_ccavenue.admin_item_1:
+  title: 'ccavenue Configuration'
+  parent: system.admin
+  description: 'ccavenue Configuration'
+  route_name: ccavenue.config

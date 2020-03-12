@@ -1,0 +1,5 @@
+uniview8_hdfcebs.admin_item_1:
+  title: 'HDFC Configuration'
+  parent: system.admin
+  description: 'HDFC Configuration'
+  route_name: hdfcebs.config

@@ -1,0 +1,69 @@
+2017-04-22 12:49:34 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=202152&date=22/04/2017%2012:04:34&custacc=
+2017-04-22 12:49:34 - 
+2017-04-22 12:49:34 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-04-22 12:49:34 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=160432&date=22/04/2017%2012:04:34&custacc=
+2017-04-22 12:49:34 - 
+2017-04-22 12:49:34 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-04-22 12:49:34 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=336907&date=22/04/2017%2012:04:34&custacc=
+2017-04-22 12:49:34 - 
+2017-04-22 12:49:34 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-04-22 12:49:34 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=211048&date=22/04/2017%2012:04:34&custacc=
+2017-04-22 12:49:34 - 
+2017-04-22 12:49:34 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-04-22 12:49:34 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=413517&date=22/04/2017%2012:04:34&custacc=
+2017-04-22 12:49:34 - 
+2017-04-22 12:49:34 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-04-22 12:49:34 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=51784&date=22/04/2017%2012:04:34&custacc=
+2017-04-22 12:49:34 - 
+2017-04-22 12:49:34 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-04-22 12:49:34 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=729661&date=22/04/2017%2012:04:34&custacc=
+2017-04-22 12:49:34 - 
+2017-04-22 12:49:34 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-04-22 12:49:34 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=757576&date=22/04/2017%2012:04:34&custacc=
+2017-04-22 12:49:34 - 
+2017-04-22 12:49:34 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-04-22 12:49:34 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=753919&date=22/04/2017%2012:04:34&custacc=
+2017-04-22 12:49:34 - 
+2017-04-22 12:49:34 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-04-22 12:49:34 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=134593&date=22/04/2017%2012:04:34&custacc=
+2017-04-22 12:49:34 - 
+2017-04-22 12:49:34 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-04-22 12:49:35 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=247981&date=22/04/2017%2012:04:35&custacc=
+2017-04-22 12:49:35 - 
+2017-04-22 12:49:35 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-04-22 12:49:35 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=84411&date=22/04/2017%2012:04:35&custacc=
+2017-04-22 12:49:35 - 
+2017-04-22 12:49:35 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-04-22 12:49:35 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=118730&date=22/04/2017%2012:04:35&custacc=
+2017-04-22 12:49:35 - 
+2017-04-22 12:49:35 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-04-22 12:49:35 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=613044&date=22/04/2017%2012:04:35&custacc=
+2017-04-22 12:49:35 - 
+2017-04-22 12:49:35 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-04-22 12:49:35 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=664599&date=22/04/2017%2012:04:35&custacc=
+2017-04-22 12:49:35 - 
+2017-04-22 12:49:35 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-04-22 12:49:35 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=567072&date=22/04/2017%2012:04:35&custacc=
+2017-04-22 12:49:35 - 
+2017-04-22 12:49:35 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-04-22 12:49:35 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=812436&date=22/04/2017%2012:04:35&custacc=
+2017-04-22 12:49:35 - 
+2017-04-22 12:49:35 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-04-22 12:49:35 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=749953&date=22/04/2017%2012:04:35&custacc=
+2017-04-22 12:49:35 - 
+2017-04-22 12:49:35 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-04-22 12:49:35 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=526654&date=22/04/2017%2012:04:35&custacc=
+2017-04-22 12:49:35 - 
+2017-04-22 12:49:35 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-04-22 12:49:35 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=299247&date=22/04/2017%2012:04:35&custacc=
+2017-04-22 12:49:35 - 
+2017-04-22 12:49:35 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-04-22 12:49:35 - ?login=&pass=&ttype=&prodid=&amt=&txncurr=&txnscamt=&clientcode=&txnid=145540&date=22/04/2017%2012:04:35&custacc=
+2017-04-22 12:49:35 - 
+2017-04-22 12:49:35 - ?&ttype=&tempTxnId=&token=&txnStage=1
+2017-04-22 12:50:58 - https://payment.atomtech.in/paynetz/epi/fts?login=160&pass=Test@123&ttype=NBFundTransfer&prodid=NSE&amt=&txncurr=INR&txnscamt=0&clientcode=NzY%3D&txnid=982191&date=22/04/2017%2012:04:58&custacc=hgfhgyu
+2017-04-22 12:50:59 - 
+2017-04-22 12:50:59 - https://payment.atomtech.in/paynetz/epi/fts?&ttype=NBFundTransfer&tempTxnId=dcffa58a5a8fd757debc&token=1234&txnStage=1
+2017-04-22 17:48:26 - https://payment.atomtech.in/paynetz/epi/fts?login=160&pass=Test@123&ttype=NBFundTransfer&prodid=NSE&amt=&txncurr=INR&txnscamt=0&clientcode=aGhq&txnid=658035&date=22/04/2017%2005:04:26&custacc=gy
+2017-04-22 17:48:26 - 
+2017-04-22 17:48:26 - https://payment.atomtech.in/paynetz/epi/fts?&ttype=NBFundTransfer&tempTxnId=c83307793fc703daef5d&token=1234&txnStage=1

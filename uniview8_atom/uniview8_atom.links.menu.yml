@@ -1,0 +1,5 @@
+uniview8_atom.admin_item_1:
+  title: 'Atom Configuration'
+  parent: system.admin
+  description: 'Atom Configuration'
+  route_name: atom.config

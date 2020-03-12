@@ -1,0 +1,16 @@
+uniview8_instamojo:
+ path: '/instamojo'
+ defaults:
+   _title: ''
+   _form: '\Drupal\uniview8_instamojo\instamojoRequest'
+ requirements:
+   _permission: 'access content'
+
+
+instamojo.config:
+ path: '/admin/config/instamojo/config'
+ defaults:
+   _form: '\Drupal\uniview8_instamojo\Form\ConfigForm'
+   _title: 'Configuration'
+ requirements:
+   _permission: 'administer site configuration'
